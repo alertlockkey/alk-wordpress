@@ -156,19 +156,20 @@
   <article id="contact">
     <section class="wrapper style5">
       <div class="inner">
-        <section>
+        <!-- <section>
           <h4>Use the form below to send us a message</h4><br>
           <form method="post" action="<?php echo get_template_directory_uri(); ?>/assets/php/send_form.php">
-            <!-- form fields unchanged -->
             <div class="row gtr-uniform">
-              <!-- Your form fields remain as they are -->
             </div>
           </form>
+        </section> -->
+        <section>
+          <?php echo do_shortcode('[contact-form-7 id="c7450dc" title="Alert Lock & Key Contact Form"]'); ?>
         </section>
 
         <a href="mailto:workorders@alertlock.net" class="icon solid fa-envelope"> workorders@alertlock.net</a>
         <p class="icon solid fa-phone">210-342-6678</p>
-        <p class="icon solid fa-building">84 NE Interstate 410 Loop<br>San Antonio, TX 78216</p>
+        <p class="icon solid fa-building">84 NE Interstate 410 Loop<br>San Antonio, TX 78216</p><br>
 
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3471.9177879829176!2d-98.48827322379279!3d29.518755443285087!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x865c60006672fe5b%3A0x804803b1b91be9cf!2s84%20NE%20Interstate%20410%20Loop%2C%20San%20Antonio%2C%20TX%2078216!5e0!3m2!1sen!2sus!4v1724881543732!5m2!1sen!2sus" style="border:0;" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
