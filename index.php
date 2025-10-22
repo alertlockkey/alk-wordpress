@@ -197,19 +197,21 @@
   </section>
 
   <script>
-    new Swiper(".swiper", {
-      slidesPerView: 1,
-      centeredSlides: true,
-      loop: true,
-      autoplay: {
-        delay: 3000,
-        disableOnInteraction: false,
-      },
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-    });
+    document.addEventListener("DOMContentLoaded", function() {
+      new Swiper(".swiper", {
+        slidesPerView: 1,
+        centeredSlides: true,
+        loop: true,
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    })
   </script>
 
 </main>
