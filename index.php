@@ -12,7 +12,8 @@
       <br>
       <h2>Alert Lock & Key</h2>
       <p>
-        <span>#1 DOOR & HARDWARE COMPANY IN SAN ANTONIO, TX</span>
+        <span>#1 DOOR & HARDWARE COMPANY</span>
+        <span>IN SOUTH AND CENTRAL TEXAS</span>
         <span>LOCALLY FAMILY OWNED AND OPERATED</span>
         <span>BONDED AND INSURED SINCE 1976</span>
         <span>AVAILABLE 24/7!</span>
