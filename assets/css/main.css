@@ -1866,6 +1866,7 @@ input, select, textarea {
 	input[type="text"],
 	input[type="password"],
 	input[type="email"],
+	input[type="tel"],
 	select,
 	textarea {
 		-moz-appearance: none;
@@ -1919,6 +1920,7 @@ input, select, textarea {
 	input[type="text"],
 	input[type="password"],
 	input[type="email"],
+	input[type="tel"],
 	select {
 		height: 2.75em;
 	}
@@ -3252,6 +3254,7 @@ input, select, textarea {
 			.wrapper.style5 input[type="text"],
 			.wrapper.style5 input[type="password"],
 			.wrapper.style5 input[type="email"],
+			.wrapper.style5 input[type="tel"],
 			.wrapper.style5 select,
 			.wrapper.style5 textarea {
 				background-color: #ffffff;
@@ -3265,7 +3268,7 @@ input, select, textarea {
 			}
 
 				.wrapper.style5 select option {
-					color: #cf2e2e;
+					color: #000000;
 					width: 100%;
 					display: block;
 				}
@@ -4793,3 +4796,116 @@ iframe {
 	body.is-mobile.landing #footer {
 		background-color: #000000;
 	}
+
+	/* USER ADDED CSS */
+
+.wpcf7 input[type="radio"],
+.wpcf7 input[type="checkbox"] {
+  appearance: auto !important;
+  opacity: 1 !important;
+  z-index: auto !important;
+  position: static !important;
+  float: none !important;
+  display: inline-block !important;
+  width: 1em !important;
+  height: 1em !important;
+  margin-right: 0.4em;
+  accent-color: #000000;
+  cursor: pointer;
+}
+
+.wpcf7 .wpcf7-list-item label {
+  display: flex;
+  align-items: center;
+  gap: auto;
+  color: inherit;
+}
+
+.wpcf7 .priority-3col {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  /* gap: 0.5rem; */
+}
+
+.wpcf7 .priority-3col .wpcf7-list-item {
+  flex: 1 0 calc(10% - 0.5rem);
+  display: flex;
+  align-items: center;
+}
+
+.wpcf7 .row.gtr-uniform {
+	display: grid;
+	flex-wrap: wrap;
+	gap: auto;
+}
+
+.wpcf7 .col-6,.wpcf7 .col-12-xsmall{
+	flex: 1 1 100%;
+	display: grid;
+}
+
+@media(
+	min-width:768px
+	)
+{.wpcf7 .col-6{
+	flex: 1 1 calc(50% - 1rem);
+}}
+
+.wpcf7 select[multiple]{
+	min-height: 7em;
+}
+
+/* ---- CF7 Employment Application layout override ---- */
+
+/* Force each question paragraph to its own line */
+.wpcf7 .questions p {
+  display: block;
+  margin: 1.25em 0 0.25em;
+  font-weight: 600;
+}
+
+.wpcf7 .questions .wpcf7-radio {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 0.75em;
+}
+
+.wpcf7 .questions .wpcf7-list-item label {
+  display: flex;
+  align-items: center;
+  gap: 0.4em;
+}
+
+
+/* Make the parent container flex */
+.col-6.col-12-small {
+  box-sizing: border-box;
+}
+
+/* Target the parent if both .col-6 items are siblings */
+.col-6.col-12-small:nth-of-type(1),
+.col-6.col-12-small:nth-of-type(2) {
+  display: inline-block;
+  width: 48%;
+  vertical-align: top;
+  margin-right: 2%;
+}
+
+/* Remove right margin from the second one */
+.col-6.col-12-small:nth-of-type(2) {
+  margin-right: 0;
+}
+
+.checkbox-row {
+  display: flex;
+  gap: 1rem; /* spacing between checkboxes */
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap; /* allows stacking on small screens */
+}
+
+.checkbox-row .col-6 {
+  flex: 1 1 45%; /* half width each with some spacing */
+}
+
