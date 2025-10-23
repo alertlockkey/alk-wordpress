@@ -2679,29 +2679,40 @@ input, select, textarea {
 
 			@media screen and (max-width: 980px) {
 
-				.features li {
-					padding: 3em 2em 1em 2em ;
-					text-align: center;
-					padding: 10%;
-				}
+			.features {
+				width: 100%;
+				box-shadow: rgba(0, 0, 0, 0.75) 3px 3px 6px 0px;
+			}
 
-					.features li:before {
-						left: 0;
-						margin: 0 0 1em 0;
-						position: relative;
-						top: 0;
-					}
+			.features li {
+				padding: 3em 2em 1em 2em ;
+				text-align: center;
+				width: 100%;
+				/* padding: 10%; */
+			}
+
+				.features li:before {
+					left: 0;
+					margin: 0 0 1em 0;
+					position: relative;
+					top: 0;
+				}
 
 			}
 
 			@media screen and (max-width: 736px) {
+
+			.features {
+				width: 100%;
+				box-shadow: rgba(0, 0, 0, 0.75) 3px 3px 6px 0px;
+			}
 
 				.features li {
 					padding: 3em 0 1em 0 ;
 					background-color: #000000;
 					border-top: solid 2px #fff;
 					width: 100%;
-					padding: 10%;
+					/* padding: 10%; */
 				}
 
 					.features li:first-child {
