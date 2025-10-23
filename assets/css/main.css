@@ -2596,16 +2596,15 @@ input, select, textarea {
 		list-style: none;
 		padding: 0;
 		width: 50%;
+		max-width: 1000px;
 		box-shadow: rgba(0, 0, 0, 0.75) 3px 3px 6px 0px;
 	}
 
 		.features li {
-			padding: 4em 4em 2em 6em ;
 			display: block;
 			position: relative;
 			text-align: center;
-			width: 100%;
-			margin: 0em auto;
+			padding: 4em 3em 2em 4em;
 			box-shadow: #ffffffb0 3px 3px 6px 0px inset,
 			#ffffffb0 -3px -3px 6px 1px inset;
 			border: 1px ridge #000000;
@@ -2681,21 +2680,22 @@ input, select, textarea {
 
 			.features {
 				width: 100%;
+				padding: 0 0;
 				box-shadow: rgba(0, 0, 0, 0.75) 3px 3px 6px 0px;
 			}
 
 			.features li {
-				padding: 3em 2em 1em 2em ;
+				padding: 3em 2em 1.5em 2em;
 				text-align: center;
 				width: 100%;
-				/* padding: 10%; */
 			}
 
 				.features li:before {
-					left: 0;
-					margin: 0 0 1em 0;
 					position: relative;
+					left: 0;
 					top: 0;
+					display: block;
+					margin: 0 auto 1em;
 				}
 
 			}
@@ -3057,6 +3057,7 @@ input, select, textarea {
 		.wrapper.style3 {
 			background-color: #cf2e2e;
 			color: #d3d4e4;
+			padding-bottom: 3.5em;
 			box-shadow: rgb(0, 0, 0) 3px 3px 6px 0px inset,
 			rgba(0, 0, 0, 0.5) -3px -3px 6px 1px inset;
 		}
