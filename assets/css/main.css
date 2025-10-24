@@ -4392,7 +4392,6 @@ iframe {
 				background-position: center;
 				background-repeat: no-repeat;
 				background-size: contain;
-				/* bottom: 4em; */
 				content: '';
 				display: block;
 				height: 1.5em;
