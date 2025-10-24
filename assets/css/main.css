@@ -2935,7 +2935,8 @@ input, select, textarea {
 			}
 
 			.wrapper.style1 header p {
-				color: #a6e0db;
+				color: #ffffff;
+				text-align: justify;
 			}
 
 			.wrapper.style1 header.major h2, .wrapper.style1 header.major h3, .wrapper.style1 header.major h4, .wrapper.style1 header.major h5, .wrapper.style1 header.major h6 {
@@ -3278,6 +3279,7 @@ input, select, textarea {
 			color: #ffffff;
 			box-shadow: #cf2e2e 3px 3px 6px 0px inset,
 			#cf2e2e -3px -3px 6px 1px inset;
+			padding-bottom: 4em;
 		}
 
 			.wrapper.style5 strong, .wrapper.style5 b {
@@ -4267,6 +4269,14 @@ iframe {
 			position: relative;
 			text-align: center;
 		}
+
+		#banner .inner {
+			display: block;
+			justify-content: center;
+			align-items: center;
+			padding-bottom: 2.5em;
+		}
+
 		#banner .image img {
 			max-width: 45%;
 		}
@@ -4368,6 +4378,7 @@ iframe {
 			margin-left: -8.5em;
 			opacity: 1;
 			outline: 0;
+			padding-top: 4.5em;
 			padding-left: 0.225em;
 			position: absolute;
 			text-align: center;
@@ -4381,13 +4392,13 @@ iframe {
 				background-position: center;
 				background-repeat: no-repeat;
 				background-size: contain;
-				bottom: 4em;
+				/* bottom: 4em; */
 				content: '';
 				display: block;
 				height: 1.5em;
 				left: 50%;
 				margin: 0 0 0 -0.75em;
-				position: absolute;
+				position: relative;
 				width: 1.5em;
 			}
 
@@ -4432,6 +4443,13 @@ iframe {
 					display: none;
 				}
 
+		}
+
+		#banner .inner {
+			display: block;
+			justify-content: center;
+			align-items: center;
+			padding-bottom: 2.5em;
 		}
 
 	body.is-preload #banner h2 {

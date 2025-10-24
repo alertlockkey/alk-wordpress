@@ -21,11 +21,10 @@
       </p>
     </div>
 
-    <br>
     <ul class="actions special">
       <li><a href="#contact" class="button primary">Contact Us</a></li>
     </ul>
-    <br><br><br>
+    
     <a href="#one" class="more scrolly">Learn More</a>
   </section>
 
