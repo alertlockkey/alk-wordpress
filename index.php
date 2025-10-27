@@ -7,7 +7,7 @@
     <div class="inner">
       <br>
       <div class="image">
-        <img src="<?php echo get_template_directory_uri(); ?>/images/alk_logo_2016.png" height="66%" width="66%" alt="">
+        <img src="<?php echo get_template_directory_uri(); ?>/images/alk_logo_2016.png" height="60%" width="60%" alt="">
       </div>
       <br>
       <h2>Alert Lock & Key</h2>
@@ -63,7 +63,7 @@
 
         <!-- Toggle button -->
         <!-- <a class="toggle-btn" id="toggle-btn">Show More</a> -->
-        <script>
+        <!-- <script>
           document.addEventListener("DOMContentLoaded", function () {
             const link = document.getElementById("toggle-btn");
             const content = document.getElementById("more-content");
@@ -79,7 +79,7 @@
               }
             });
           });
-        </script>
+        </script> -->
       </header>
 
       <ul class="icons major">
@@ -91,8 +91,8 @@
   <!-- Two -->
   <section id="two" class="wrapper alt style2">
     <section class="spotlight">
-      <div class="image">
-        <img src="<?php echo get_template_directory_uri(); ?>/images/secured_panic.png" alt="">
+      <div class="image" data-folder="<?php echo get_template_directory_uri(); ?>/images/doors_hardware/">
+        <img src="<?php echo get_template_directory_uri(); ?>/images/doors_hardware/doors_hardware (1).jpg" alt="Doors & Hardware">
       </div>
       <div class="content">
         <h2>Doors & Hardware</h2>
@@ -100,8 +100,8 @@
       </div>
     </section>
     <section class="spotlight">
-      <div class="image">
-        <img src="<?php echo get_template_directory_uri(); ?>/images/locksmith.png" alt="">
+      <div class="image" data-folder="<?php echo get_template_directory_uri(); ?>/images/locksmith/">
+        <img src="<?php echo get_template_directory_uri(); ?>/images/locksmith/locksmith (1).jpg" alt="Locksmith">
       </div>
       <div class="content">
         <h2>Locksmith Services</h2>
@@ -109,8 +109,8 @@
       </div>
     </section>
     <section class="spotlight">
-      <div class="image">
-        <img src="<?php echo get_template_directory_uri(); ?>/images/alk_alarms.jpg" alt="">
+      <div class="image" data-folder="<?php echo get_template_directory_uri(); ?>/images/access_control/">
+        <img src="<?php echo get_template_directory_uri(); ?>/images/access_control/access_control (1).jpg" alt="Access Control">
       </div>
       <div class="content">
         <h2>Access Control</h2>

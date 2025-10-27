@@ -2743,9 +2743,12 @@ input, select, textarea {
 			-moz-order: 1;
 			-webkit-order: 1;
 			-ms-order: 1;
+			position: relative;
 			order: 1;
 			border-radius: 0;
-			width: 40%;
+			width: 100%;
+			aspect-ratio: 16 / 9;
+			overflow: hidden;
 		}
 
 			.spotlight .image img {
@@ -4991,3 +4994,21 @@ iframe {
   flex: 1 1 45%; /* half width each with some spacing */
 }
 
+.spotlight .image img {
+  position: absolute;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: opacity 1s ease-in-out;
+  object-fit: cover;
+  opacity: 1;
+}
+
+.spotlight .image img.fade-out {
+  opacity: 0;
+}
+
+.spotlight .image img.fade-in {
+  opacity: 1;
+}
