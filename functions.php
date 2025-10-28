@@ -1,7 +1,7 @@
 <?php
 function alertlockkey_enqueue_assets() {
     // CSS
-    wp_enqueue_style('alertlockkey-main', get_template_directory_uri() . '/assets/css/main.css');
+    wp_enqueue_style('alertlockkey-main', get_template_directory_uri() . '/assets/css/main.css?' . time(), array(), null);
     wp_enqueue_style('alertlockkey-fontawesome', get_template_directory_uri() . '/assets/css/fontawesome-all.min.css');
     wp_enqueue_style('alertlockkey-swiper', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css');
     wp_enqueue_style('alertlockkey-style', get_stylesheet_uri()); // theme style.css

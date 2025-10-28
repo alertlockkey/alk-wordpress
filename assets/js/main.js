@@ -6,24 +6,94 @@
 
 (function($) {
 
-// USER ADDED TEXT EFFECT
+// USER ADDED
 
-// END USER ADDED TEXT EFFECT
+document.addEventListener("DOMContentLoaded", () => {
+  const spotlights = document.querySelectorAll(".spotlight");
 
-// CHECKBOX LOGIC CAREERS PAGE
+  spotlights.forEach(spotlight => {
+    const img = spotlight.querySelector(".image img");
+    if (!img) return;
 
-document.querySelectorAll('.question-checkbox').forEach((questionDiv) => {
-    questionDiv.addEventListener('change', (event) => {
-        if (event.target.type === 'checkbox' && event.target.checked) {
-            // Uncheck other checkboxes within the same question group
-            questionDiv.querySelectorAll('input[type="checkbox"]').forEach((box) => {
-                if (box !== event.target) box.checked = false;
-            });
-        }
-    });
-})
+    let images = [];
+    const alt = img.alt.trim();
 
-// END CHECKBOX LOGIC CAREERS PAGE
+    if (alt === "Doors & Hardware") {
+      images = [
+        "doors_hardware (1).jpg",
+        "doors_hardware (2).jpg",
+        "doors_hardware (3).jpg",
+        "doors_hardware (4).jpg",
+        "doors_hardware (5).jpg",
+        "doors_hardware (6).jpg",
+        "doors_hardware (7).jpg",
+        "doors_hardware (8).jpg",
+        "doors_hardware (9).jpg",
+        "doors_hardware (10).jpg"
+      ];
+    } else if (alt === "Locksmith") {
+      images = [
+        "locksmith (1).jpg",
+        "locksmith (2).jpg",
+        "locksmith (3).jpg",
+        "locksmith (4).jpg",
+        "locksmith (5).jpg"
+      ];
+    } else if (alt === "Access Control") {
+      images = [
+        "access_control (1).jpg",
+        "access_control (2).jpg",
+        "access_control (3).jpg",
+        "access_control (4).jpg",
+        "access_control (5).jpg",
+        "access_control (6).jpg",
+        "access_control (7).jpg",
+        "access_control (8).jpg",
+        "access_control (9).jpg",
+        "access_control (10).jpg"
+      ];
+    }
+
+    if (!images.length) return;
+
+    const folder = spotlight.querySelector(".image").dataset.folder;
+    let current = 0;
+
+    // 👇 function to handle fade and random interval
+    const switchImage = () => {
+      let next;
+      do {
+        next = Math.floor(Math.random() * images.length);
+      } while (next === current);
+
+      current = next;
+      const newImage = folder + images[current];
+
+      img.classList.add("fade-out");
+
+      setTimeout(() => {
+        img.src = newImage;
+        img.classList.remove("fade-out");
+        img.classList.add("fade-in");
+
+        setTimeout(() => {
+          img.classList.remove("fade-in");
+        }, 1000);
+      }, 1000);
+
+      // 🔀 choose next delay between 4–7 seconds
+      const nextDelay = Math.floor(Math.random() * 3000) + 4000;
+      setTimeout(switchImage, nextDelay);
+    };
+
+    // 🕐 start with a short random initial delay too
+    const initialDelay = Math.floor(Math.random() * 2000) + 1000;
+    setTimeout(switchImage, initialDelay);
+  });
+});
+
+
+// END USER ADDED
 
 var	$window = $(window),
 		$body = $('body'),
