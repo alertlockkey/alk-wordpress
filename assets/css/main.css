@@ -2846,6 +2846,14 @@ input, select, textarea {
 				width: 55%;
 			}
 
+			.spotlight .image img.fade-out {
+			opacity: 0;
+			}
+
+			.spotlight .image img.fade-in {
+			opacity: 1;
+			}
+
 		}
 
 		@media screen and (max-width: 980px) {
@@ -2869,6 +2877,14 @@ input, select, textarea {
 					width: 100%;
 				}
 
+				.spotlight .image img.fade-out {
+				opacity: 0;
+				}
+
+				.spotlight .image img.fade-in {
+				opacity: 1;
+				}
+
 		}
 
 		@media screen and (max-width: 736px) {
@@ -2877,6 +2893,13 @@ input, select, textarea {
 				padding: 3em 2em 3em 2em ;
 			}
 
+			.spotlight .image img.fade-out {
+			opacity: 0;
+			}
+
+			.spotlight .image img.fade-in {
+			opacity: 1;
+			}
 		}
 
 /* Wrapper */
@@ -4350,8 +4373,13 @@ iframe {
 			}
 
 		#banner p {
-			letter-spacing: 0.225em;
+			display: inline-block;
 			text-transform: uppercase;
+			background: #00000020;
+			width: 33%;
+			border-radius: 10px;
+			box-shadow: rgb(0, 0, 0, 0.) 2px 2px 4px 0px, 
+			rgba(0, 0, 0, 0.1) -3px 2px 4px 1px;
 		}
 
 			#banner p a {
@@ -4359,50 +4387,41 @@ iframe {
 			}
 
 		#banner .more {
-			-moz-transition: -moz-transform 0.75s ease, opacity 0.75s ease;
-			-webkit-transition: -webkit-transform 0.75s ease, opacity 0.75s ease;
-			-ms-transition: -ms-transform 0.75s ease, opacity 0.75s ease;
 			transition: transform 0.75s ease, opacity 0.75s ease;
-			-moz-transition-delay: 3.5s;
-			-webkit-transition-delay: 3.5s;
-			-ms-transition-delay: 3.5s;
 			transition-delay: 3.5s;
-			-moz-transform: translateY(0);
-			-webkit-transform: translateY(0);
-			-ms-transform: translateY(0);
 			transform: translateY(0);
+			background-color: #00000020;
+			border-radius: 50%;
 			border: none;
-			bottom: 0;
+			bottom: 2em;
 			color: inherit;
 			font-size: 0.8em;
-			height: 8.5em;
+			height: 3em;
+			width: 3em;
 			left: 50%;
-			letter-spacing: 0.225em;
-			margin-left: -8.5em;
+			transform: translateX(-50%);
 			opacity: 1;
 			outline: 0;
-			padding-top: 4.5em;
-			padding-left: 0.225em;
 			position: absolute;
 			text-align: center;
 			text-transform: uppercase;
-			width: 16em;
 			z-index: 1;
+			display: flex;
+			justify-content: center;
+			align-items: center;
 		}
 
-			#banner .more:after {
-				background-image: url("images/arrow.svg");
-				background-position: center;
-				background-repeat: no-repeat;
-				background-size: contain;
-				content: '';
-				display: block;
-				height: 1.5em;
-				left: 50%;
-				margin: 0 0 0 -0.75em;
-				position: relative;
-				width: 1.5em;
-			}
+		#banner .more:after {
+			background-image: url("images/arrow.svg");
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: contain;
+			content: '';
+			display: block;
+			height: 1em;
+			width: 1em;
+		}
+
 
 		#banner:after {
 			pointer-events: none;

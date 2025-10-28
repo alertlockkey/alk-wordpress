@@ -5,14 +5,13 @@
   <!-- Careers Article -->
   <article id="careers">
     <header>
-      <p>Fill out the form below to apply today</p><br>
+      <br><h2>Employment Application</h2><br>
     </header>
-
-    <section class="wrapper style5">
+    <section id="application" class="wrapper style5" alt="">
       <div class="inner">
         <section>
-          <h4>Employment Application</h4>
-          <p>Please enter your information. Fill in all boxes.</p>
+          <h4></h4>
+          <p>Please fill out the form below to apply today.</p>
           <br>
 
           <?php echo do_shortcode('[contact-form-7 id="20f8809" title="Employment Application"]'); ?>
