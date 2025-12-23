@@ -1,0 +1,35 @@
+<h4>Use the form below to send us a message</h4><br>
+
+<div class="row gtr-uniform">
+  <div class="col-6 col-12-xsmall">
+    [text* your-name id:demo-name placeholder "Name"]
+  </div>
+
+  <div class="col-6 col-12-xsmall">
+    [email* your-email id:demo-email placeholder "Email"]
+  </div>
+
+  <div class="col-12">
+    [select* your-category id:demo-category include_blank "Get a Quote" "Work Orders" "Accounts Payable" "Accounts Receivable" "General"]
+  </div>
+
+  <div class="col-12">
+    <p>Priority:</p>
+      [radio your-priority use_label_element class:priority-3col default:2 "Low" "Normal" "High"]
+  </div>
+
+  <div class="col-12">
+    [textarea* your-message placeholder "Enter your message"]
+  </div>
+
+  <div class="col-6 col-12-small">
+    [checkbox your-human use_label_element default:1 "Not a robot"] [checkbox your-copy use_label_element "Email me a copy"]
+  </div>
+
+  <div class="col-12">
+    <ul class="actions">
+      [submit class:primary "Send Message"]
+      <li><input type="reset" value="Reset" /></li>
+    </ul>
+  </div>
+</div>

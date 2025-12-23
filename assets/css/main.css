@@ -2750,11 +2750,17 @@ input, select, textarea {
 			aspect-ratio: 16 / 9;
 			overflow: hidden;
 		}
-
-			.spotlight .image img {
-				border-radius: 0;
-				width: 100%;
-			}
+		
+		.spotlight .image img {
+			border-radius: 0;
+			width: 100%;
+			padding-top: 4.5px;
+			padding-bottom: 4.5px;
+			padding-left: 4.5px;
+			padding-right: 4.5px;
+			object-fit: contain;
+			/* display: block; */
+		}
 
 		.spotlight .content {
 			padding: 2em 4em 0.1em 4em ;
@@ -3305,6 +3311,7 @@ input, select, textarea {
 			color: #ffffff;
 			box-shadow: #cf2e2e 3px 3px 6px 0px inset,
 			#cf2e2e -3px -3px 6px 1px inset;
+			padding-top:2em;
 			padding-bottom: 4em;
 		}
 
@@ -4312,14 +4319,15 @@ iframe {
 		}
 
 		#banner p {
-			/* letter-spacing: 0.225em;
+			display: inline-block;
 			text-transform: uppercase;
-			z-index: 2;
-			position: relative;
-			bottom: -150px; */
-			letter-spacing: 0.225em;
-			text-transform: uppercase;
+			background: #00000020;
+			width: 90%;
+			border-radius: 10px;
+			box-shadow: rgb(0, 0, 0, 0.) 2px 2px 4px 0px, 
+			rgba(0, 0, 0, 0.1) -3px 2px 4px 1px;
 		}
+
 		ul.actions.special {
 			/* z-index: 2; */
 			position: relative;
@@ -4458,6 +4466,80 @@ iframe {
 
 				#banner br {
 					display: none;
+				}
+
+				#banner p {
+					display: inline-block;
+					text-transform: uppercase;
+					background: #00000020;
+					width: 90%;
+					border-radius: 10px;
+					box-shadow: rgb(0, 0, 0, 0.) 2px 2px 4px 0px, 
+					rgba(0, 0, 0, 0.1) -3px 2px 4px 1px;
+				}
+
+				#banner .more {
+					display: none;
+				}
+
+		}
+
+		@media screen and (max-width: 980px) {
+
+			#banner {
+				padding: 7em 3em 5em 3em ;
+				height: auto;
+				min-height: 0;
+			}
+
+				#banner h2 {
+					font-size: 1.25em;
+				}
+
+				#banner br {
+					display: none;
+				}
+
+				#banner p {
+					display: inline-block;
+					text-transform: uppercase;
+					background: #00000020;
+					width: 90%;
+					border-radius: 10px;
+					box-shadow: rgb(0, 0, 0, 0.) 2px 2px 4px 0px, 
+					rgba(0, 0, 0, 0.1) -3px 2px 4px 1px;
+				}
+
+				#banner .more {
+					display: none;
+				}
+
+		}
+
+		@media screen and (max-width: 1280px) {
+
+			#banner {
+				padding: 7em 3em 5em 3em ;
+				height: auto;
+				min-height: 0;
+			}
+
+				#banner h2 {
+					font-size: 1.25em;
+				}
+
+				#banner br {
+					display: none;
+				}
+
+				#banner p {
+					display: inline-block;
+					text-transform: uppercase;
+					background: #00000020;
+					width: 90%;
+					border-radius: 10px;
+					box-shadow: rgb(0, 0, 0, 0.) 2px 2px 4px 0px, 
+					rgba(0, 0, 0, 0.1) -3px 2px 4px 1px;
 				}
 
 				#banner .more {
@@ -4919,23 +5001,24 @@ iframe {
 }
 
 .wpcf7 .wpcf7-list-item label {
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  gap: auto;
+  gap: 6px;
   color: inherit;
 }
 
 .wpcf7 .priority-3col {
-  display: flex;
+  display: inline-flex;
   flex-wrap: nowrap;
   justify-content: space-between;
-  /* gap: 0.5rem; */
+  /* grid-template-columns: repeat(3, 1fr); */
+  gap: 3em;
 }
 
 .wpcf7 .priority-3col .wpcf7-list-item {
-  flex: 1 0 calc(10% - 0.5rem);
-  display: flex;
-  align-items: center;
+	flex: 1 0 calc(10% - 0.5rem);
+	display: flex;
+	align-items: center;
 }
 
 .wpcf7 .row.gtr-uniform {
@@ -4976,8 +5059,8 @@ iframe {
 }
 
 .wpcf7 .questions .wpcf7-list-item label {
-  display: flex;
-  align-items: center;
+  display: inline-block;
+  align-content: center;
   gap: 0.4em;
 }
 
@@ -4985,6 +5068,7 @@ iframe {
 /* Make the parent container flex */
 .col-6.col-12-small {
   box-sizing: border-box;
+  align-items: center;
 }
 
 /* Target the parent if both .col-6 items are siblings */
@@ -5030,4 +5114,108 @@ iframe {
 
 .spotlight .image img.fade-in {
   opacity: 1;
+}
+
+.wpcf7-form-control-wrap[data-name="your-category"] select {
+  display: block;
+  width: 49%;
+  padding: 12px;
+  border-radius: 3px;
+  box-sizing: border-box;
+}
+
+.wpcf7-form-control-wrap[data-name="city"] input {
+  display: block;
+  width: 100%;
+  height: 2.75em;
+  border-radius: 3px;
+  width: 100%;
+}
+
+.wpcf7-form-control-wrap[data-name="state"] input {
+  display: block;
+  width: 100%;
+  height: 2.75em;
+  border-radius: 3px;
+  width: 100%;
+	
+}
+
+.wpcf7-form-control-wrap[data-name="experience-selection"] select {
+  min-height: 160px;
+  width: 48%;
+}
+
+.wpcf7-form-control-wrap[data-name="tool-category"] select {
+  min-height: 12px;
+  padding: 0 1em;
+  width: 48%;
+}
+
+.wpcf7-form .actions {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.wpcf7-form input.wpcf7-submit {
+  border-radius: 4px;
+  border: none;
+  background-color: #111;
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.wpcf7-form input.wpcf7-submit:hover {
+  background-color: #000;
+}
+
+.wpcf7-form input.wpcf7-submit:active {
+  transform: translateY(1px);
+}
+
+.wpcf7-form input[type="reset"] {
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background: transparent;
+  color: #ffffff;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.wpcf7-form input[type="reset"]:hover {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.wpcf7-spinner {
+  margin-left: 10px;
+  vertical-align: middle;
+}
+
+@media (max-width: 600px) {
+  .wpcf7-form .actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .wpcf7-form input.wpcf7-submit,
+  .wpcf7-form input[type="reset"] {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+
+.wpcf7-form .col-6.col-12-small p {
+  display: flex;
+  gap: 3em;
+  align-items: center;
 }

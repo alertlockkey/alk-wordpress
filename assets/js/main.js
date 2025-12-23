@@ -30,15 +30,28 @@ document.addEventListener("DOMContentLoaded", () => {
         "doors_hardware (7).jpg",
         "doors_hardware (8).jpg",
         "doors_hardware (9).jpg",
-        "doors_hardware (10).jpg"
+        "doors_hardware (10).jpg",
+        "doors_hardware (11).jpg",
+        "doors_hardware (12).jpg"
       ];
     } else if (alt === "Locksmith") {
       images = [
         "locksmith (1).jpg",
+        "locksmith (1).jpeg",
         "locksmith (2).jpg",
+        "locksmith (2).jpeg",
         "locksmith (3).jpg",
         "locksmith (4).jpg",
-        "locksmith (5).jpg"
+        "locksmith (5).jpg",
+        "locksmith (6).jpg",
+        "locksmith (7).jpg",
+        "locksmith (8).jpg",
+        "locksmith (9).jpg",
+        "locksmith (10).jpg",
+        "locksmith (11).jpg",
+        "locksmith (12).jpg",
+        "locksmith (13).jpg",
+        "locksmith (14).jpg"
       ];
     } else if (alt === "Access Control") {
       images = [
@@ -51,7 +64,6 @@ document.addEventListener("DOMContentLoaded", () => {
         "access_control (7).jpg",
         "access_control (8).jpg",
         "access_control (9).jpg",
-        "access_control (10).jpg"
       ];
     }
 
@@ -163,10 +175,10 @@ const resolver = {
  * Source: http://theportalwiki.com/wiki/GLaDOS_voice_lines#Chapter_9:_The_Part_Where_He_Kills_You
  */
 const strings = [
-  '#1 Door and hardware company\n in Central and South Texas',
-  'Locally family owned and operated',
-  'Bonded and insured since 1976',
-  '(210)342-6678 - Available 24/7'
+  '#1 Door and hardware company in Central and South Texas',
+  'Bonded and insured since 1976',  
+  '(210)342-6678 - Available 24/7',
+  'Locally family owned and operated'
 ];
 
 let counter = 0;

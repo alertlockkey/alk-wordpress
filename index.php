@@ -170,7 +170,7 @@
           </form>
         </section> -->
         <section>
-          <?php echo do_shortcode('[contact-form-7 id="bfecbe1" title="Alert Lock & Key Contact Form"]'); ?>
+          <?php echo do_shortcode('[contact-form-7 id="7a11450" title="Contact Form"]'); ?>
         </section>
 
         <a href="mailto:workorders@alertlock.net" class="icon solid fa-envelope"> workorders@alertlock.net</a>

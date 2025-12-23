@@ -1,0 +1,86 @@
+<div class="row gtr-uniform">
+
+  <!-- Basic info -->
+  <div class="col-6 col-12-xsmall">
+    [text* first-name placeholder "First Name"]
+  </div>
+
+  <div class="col-6 col-12-xsmall">
+    [text middle-name placeholder "Middle Name"]
+  </div>
+
+  <div class="col-6 col-12-xsmall">
+    [text* last-name placeholder "Last Name"]
+  </div>
+
+  <div class="col-6 col-12-xsmall">
+    [tel* applicant-phone placeholder "Phone Number"]
+  </div>
+  
+  <div class="col-6 col-12-xsmall">
+    [email* applicant-email placeholder "Email"]
+  </div>
+
+  <!-- Yes/No questions -->
+  <div class="questions">
+    <p>Are you comfortable with using portable devices?</p>
+    [radio comfortable-devices use_label_element "Yes" "No"]
+
+    <p>Are you at least 18 years of age?</p>
+    [radio age-18 use_label_element "Yes" "No"]
+
+    <p>Are you legally able to work in the U.S.?</p>
+    [radio legal-work use_label_element "Yes" "No"]
+
+    <p>Have you worked for Alert Lock & Key before?</p>
+    [radio worked-before use_label_element "Yes" "No"]
+
+    <p>Do you have a valid driver’s license?</p>
+    [radio drivers-license use_label_element "Yes" "No"]
+
+    <p>Do you have a clean driving record?</p>
+    [radio clean-record use_label_element "Yes" "No"]
+
+    <p>Are you able to reliably get to work on time?</p>
+    [radio reliable-arrival use_label_element "Yes" "No"]
+
+    <p>Are you willing to participate in random drug screenings?</p>
+    [radio drug-screen use_label_element "Yes" "No"]
+  </div>
+
+  <!-- Location -->
+  <p>Where are you located?</p>
+
+  <div class="col-6 col-12-xsmall">
+    [text* city placeholder "City"]
+  </div>
+
+  <div class="col-6 col-12-xsmall">
+    [text* state placeholder "State"]
+  </div>
+
+  <!-- Travel -->
+  <p>Are you willing to travel for work?</p>
+  [radio travel use_label_element "Yes" "No"]
+
+  <p>Are you willing to be out of town overnight?</p>
+  [radio overnight use_label_element "Yes" "No"]
+
+  <p>Are you willing to be out of town multiple days/nights in a row?</p>
+  [radio multi-night use_label_element "Yes" "No"]
+
+  <!-- Experience & tools -->
+  <p>Please check all the experience you have (Ctrl / Cmd to select multiple):</p>
+  [select experience-selection multiple include_blank "None" "Home Renovations / D.I.Y" "Locksmith" "Commercial Construction" "Residential Construction" "Carpentry" "Finish Carpentry" "Electrical" "Access Control" "Low Voltage" "Door Hardware Installation" "Facilities Maintenance"]
+  
+  <p>Which best describes the tools you own:</p>
+  [select* tool-category include_blank "None" "Basic Tools (Electric Drill, Pliers, Screw Driver, Measuring Tape, Hammer)" "Experienced Tools (Basic Tools +)"]
+
+  <!-- Submit -->
+  <div class="col-12">
+    <ul class="actions">
+      [submit class:primary "Submit Application"]
+      <li><input type="reset" value="Reset" /></li>
+    </ul>
+  </div>
+</div>
