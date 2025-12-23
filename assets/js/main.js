@@ -8,6 +8,7 @@
 
 // USER ADDED
 
+// Spotlight image rotation
 document.addEventListener("DOMContentLoaded", () => {
   const spotlights = document.querySelectorAll(".spotlight");
 
@@ -29,15 +30,28 @@ document.addEventListener("DOMContentLoaded", () => {
         "doors_hardware (7).jpg",
         "doors_hardware (8).jpg",
         "doors_hardware (9).jpg",
-        "doors_hardware (10).jpg"
+        "doors_hardware (10).jpg",
+        "doors_hardware (11).jpg",
+        "doors_hardware (12).jpg"
       ];
     } else if (alt === "Locksmith") {
       images = [
         "locksmith (1).jpg",
+        "locksmith (1).jpeg",
         "locksmith (2).jpg",
+        "locksmith (2).jpeg",
         "locksmith (3).jpg",
         "locksmith (4).jpg",
-        "locksmith (5).jpg"
+        "locksmith (5).jpg",
+        "locksmith (6).jpg",
+        "locksmith (7).jpg",
+        "locksmith (8).jpg",
+        "locksmith (9).jpg",
+        "locksmith (10).jpg",
+        "locksmith (11).jpg",
+        "locksmith (12).jpg",
+        "locksmith (13).jpg",
+        "locksmith (14).jpg"
       ];
     } else if (alt === "Access Control") {
       images = [
@@ -50,7 +64,6 @@ document.addEventListener("DOMContentLoaded", () => {
         "access_control (7).jpg",
         "access_control (8).jpg",
         "access_control (9).jpg",
-        "access_control (10).jpg"
       ];
     }
 
@@ -91,7 +104,116 @@ document.addEventListener("DOMContentLoaded", () => {
     setTimeout(switchImage, initialDelay);
   });
 });
+// End spotlight image rotation
 
+// Typing text effect code from Futurisitic Resolving/Typing Text Effect on https://www.sliderrevolution.com/design/cool-javascript-animations/
+
+const resolver = {
+  resolve: function resolve(options, callback) {
+    // The string to resolve
+    const resolveString = options.resolveString || options.element.getAttribute('data-target-resolver');
+    const combinedOptions = Object.assign({}, options, {resolveString: resolveString});
+    
+    function getRandomInteger(min, max) {
+      return Math.floor(Math.random() * (max - min + 1)) + min;
+    };
+    
+    function randomCharacter(characters) {
+      return characters[getRandomInteger(0, characters.length - 1)];
+    };
+    
+    function doRandomiserEffect(options, callback) {
+      const characters = options.characters;
+      const timeout = options.timeout;
+      const element = options.element;
+      const partialString = options.partialString;
+
+      let iterations = options.iterations;
+
+      setTimeout(() => {
+        if (iterations >= 0) {
+          const nextOptions = Object.assign({}, options, {iterations: iterations - 1});
+
+          // Ensures partialString without the random character as the final state.
+          if (iterations === 0) {
+            element.textContent = partialString;
+          } else {
+            // Replaces the last character of partialString with a random character
+            element.textContent = partialString.substring(0, partialString.length - 1) + randomCharacter(characters);
+          }
+
+          doRandomiserEffect(nextOptions, callback)
+        } else if (typeof callback === "function") {
+          callback(); 
+        }
+      }, options.timeout);
+    };
+    
+    function doResolverEffect(options, callback) {
+      const resolveString = options.resolveString;
+      const characters = options.characters;
+      const offset = options.offset;
+      const partialString = resolveString.substring(0, offset);
+      const combinedOptions = Object.assign({}, options, {partialString: partialString});
+
+      doRandomiserEffect(combinedOptions, () => {
+        const nextOptions = Object.assign({}, options, {offset: offset + 1});
+
+        if (offset <= resolveString.length) {
+          doResolverEffect(nextOptions, callback);
+        } else if (typeof callback === "function") {
+          callback();
+        }
+      });
+    };
+
+    doResolverEffect(combinedOptions, callback);
+  } 
+}
+
+/* Some GLaDOS quotes from Portal 2 chapter 9: The Part Where He Kills You
+ * Source: http://theportalwiki.com/wiki/GLaDOS_voice_lines#Chapter_9:_The_Part_Where_He_Kills_You
+ */
+const strings = [
+  '#1 Door and hardware company in Central and South Texas',
+  'Bonded and insured since 1976',  
+  '(210)342-6678 - Available 24/7',
+  'Locally family owned and operated'
+];
+
+let counter = 0;
+
+const options = {
+  // Initial position
+  offset: 0,
+  // Timeout between each random character
+  timeout: 5,
+  // Number of random characters to show
+  iterations: 10,
+  // Random characters to pick from
+  characters: ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'x', 'y', 'x', '#', '%', '&', '-', '+', '_', '?', '/', '\\', '='],
+  // String to resolve
+  resolveString: strings[counter],
+  // The element
+  element: document.querySelector('[data-target-resolver]')
+}
+
+// Callback function when resolve completes
+function callback() {
+  setTimeout(() => {
+    counter ++;
+    
+    if (counter >= strings.length) {
+      counter = 0;
+    }
+    
+    let nextOptions = Object.assign({}, options, {resolveString: strings[counter]});
+    resolver.resolve(nextOptions, callback);
+  }, 4000);
+}
+
+resolver.resolve(options, callback);
+// End of typing text effect code
 
 // END USER ADDED
 
@@ -99,6 +221,7 @@ var	$window = $(window),
 		$body = $('body'),
 		$wrapper = $('#page-wrapper'),
 		$banner = $('#banner'),
+		$application = $('#application'),
 		$header = $('#header');
 
 	// Breakpoints.
@@ -131,13 +254,53 @@ var	$window = $(window),
 			});
 
 		}
-
-	// Scrolly.
+		
+		// Scrolly.
 		$('.scrolly')
-			.scrolly({
-				speed: 1500,
-				offset: $header.outerHeight()
-			});
+		.scrolly({
+			speed: 1500,
+			offset: $header.outerHeight()
+		});
+
+		// logic for scrolly to work on both staging and local environments 
+		// Staging menu links will need to include /staging/ (e.g. /staging/#about)
+		// Local menu links need to be like this /#about
+
+		let basePath = '/';
+		const href = window.location.href;
+
+		if (href.includes('/alertlockkey/')) {
+			basePath = '/alertlockkey/';
+		} else if (href.includes('/staging/')) {
+			basePath = '/staging/';
+		}
+
+		console.log('Resolved basePath:', basePath);
+
+		$('#menu a[href^="/#"]').each(function () {
+			const hash = this.getAttribute('href').split('#')[1];
+			this.setAttribute('href', basePath + '#' + hash);
+		});
+
+		$('a[href^="/#"], a[href^="/alertlockkey/#"], a[href^="/staging/#"]').on('click', function (e) {
+			const href = $(this).attr('href');
+			const hash = href.split('#')[1];
+			const target = document.getElementById(hash);
+
+			const path = window.location.pathname;
+			const isLocal = href.includes('/alertlockkey/');
+			const isStaging = href.includes('/staging/');
+			const isProd = !isLocal && !isStaging;
+
+			if (isLocal || isStaging || isProd) {
+			e.preventDefault();
+			if (target) {
+				$('html, body').animate({
+				scrollTop: $(target).offset().top - $('#header').outerHeight()
+				}, 1500);
+			}
+			}
+		});
 
 	// Menu.
 		$('#menu')
@@ -155,18 +318,23 @@ var	$window = $(window),
 			});
 
 	// Header.
-		if ($banner.length > 0
-		&&	$header.hasClass('alt')) {
+		if ($banner.length > 0 && $header.hasClass('alt') ||
+		($application.length > 0 && $header.hasClass('alt'))) {
 
 			$window.on('resize', function() { $window.trigger('scroll'); });
 
-			$banner.scrollex({
-				bottom:		$header.outerHeight() + 1,
-				terminate:	function() { $header.removeClass('alt'); },
-				enter:		function() { $header.addClass('alt'); },
-				leave:		function() { $header.removeClass('alt'); }
-			});
+			const target = $banner.length > 0 ? $banner : $application;
 
+			target.scrollex({
+				bottom: $header.outerHeight() + 1,
+				terminate: function () { $header.removeClass('alt'); },
+				enter: function () { $header.addClass('alt'); },
+				leave: function () { $header.removeClass('alt'); }
+			});
 		}
 
+
+
 })(jQuery);
+
+

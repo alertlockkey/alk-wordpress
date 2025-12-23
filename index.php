@@ -10,26 +10,27 @@
         <img src="<?php echo get_template_directory_uri(); ?>/images/alk_logo_2016.png" height="60%" width="60%" alt="">
       </div>
       <br>
-      <h2>Alert Lock & Key</h2>
-      <p>
+      <h2>Alert Lock & Key</h2><br>
+      <p class="heading" data-target-resolver></p>
+      <!-- <p>
         <span>#1 DOOR & HARDWARE COMPANY</span>
         <span>IN SOUTH AND CENTRAL TEXAS</span>
         <span>LOCALLY FAMILY OWNED AND OPERATED</span>
         <span>BONDED AND INSURED SINCE 1976</span>
         <span>AVAILABLE 24/7!</span>
         <span>(210) 342-6678</span>
-      </p>
+      </p> -->
     </div>
 
     <ul class="actions special">
       <li><a href="#contact" class="button primary">Contact Us</a></li>
     </ul>
     
-    <a href="#one" class="more scrolly">Learn More</a>
+    <a href="#one" class="more scrolly"></a>
   </section>
 
   <!-- One -->
-  <section id="one" class="wrapper style1 special">
+  <section id="about" class="wrapper style1 special">
     <div class="inner">
       <header class="major">
         <h2>About Us</h2>
@@ -121,7 +122,8 @@
   </section>
 
   <!-- Three -->
-  <section id="three" class="wrapper style3 special">
+  <!-- <section id="three" class="wrapper style3 special"> -->
+  <section id="services" class="wrapper style3 special">
     <div class="inner">
       <header class="major">
         <h2>Services</h2>
@@ -168,7 +170,7 @@
           </form>
         </section> -->
         <section>
-          <?php echo do_shortcode('[contact-form-7 id="bfecbe1" title="Alert Lock & Key Contact Form"]'); ?>
+          <?php echo do_shortcode('[contact-form-7 id="7a11450" title="Contact Form"]'); ?>
         </section>
 
         <a href="mailto:workorders@alertlock.net" class="icon solid fa-envelope"> workorders@alertlock.net</a>

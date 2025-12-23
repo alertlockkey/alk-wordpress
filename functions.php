@@ -1,11 +1,14 @@
 <?php
 function alertlockkey_enqueue_assets() {
     // CSS
-    wp_enqueue_style('alertlockkey-main', get_template_directory_uri() . '/assets/css/main.css?' . time(), array(), null);
+    // wp_enqueue_style('alertlockkey-main', get_template_directory_uri() . '/assets/css/main.css?' . time(), array(), null);
+    wp_enqueue_style('alertlockkey-main', get_template_directory_uri() . '/assets/css/main.css', array(), filemtime(get_template_directory() . '/assets/css/main.css'));
+
+    // JS
     wp_enqueue_style('alertlockkey-fontawesome', get_template_directory_uri() . '/assets/css/fontawesome-all.min.css');
     wp_enqueue_style('alertlockkey-swiper', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css');
     wp_enqueue_style('alertlockkey-style', get_stylesheet_uri()); // theme style.css
-
+    
     // JS
     wp_enqueue_script('jquery');
     wp_enqueue_script('alertlockkey-swiper', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js', array(), null, true);
@@ -15,7 +18,7 @@ function alertlockkey_enqueue_assets() {
     wp_enqueue_script('alertlockkey-util', get_template_directory_uri() . '/assets/js/util.js', array('jquery'), null, true);
     wp_enqueue_script('alertlockkey-scrollex', get_template_directory_uri() . '/assets/js/jquery.scrollex.min.js', array('jquery'), null, true);
     wp_enqueue_script('alertlockkey-scrolly', get_template_directory_uri() . '/assets/js/jquery.scrolly.min.js', array('jquery'), null, true);
-    wp_enqueue_script('alertlockkey-main', get_template_directory_uri() . '/assets/js/main.js', array('jquery'), null, true);
+    wp_enqueue_script('alertlockkey-main', get_template_directory_uri() . '/assets/js/main.js', array('jquery'), filemtime(get_template_directory() . '/assets/js/main.js'), true);
 }
 add_action('wp_enqueue_scripts', 'alertlockkey_enqueue_assets');
 
@@ -25,3 +28,4 @@ function alertlockkey_register_menus() {
     ));
 }
 add_action('init', 'alertlockkey_register_menus');
+
