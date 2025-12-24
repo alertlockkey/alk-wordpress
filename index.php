@@ -35,7 +35,7 @@
       <header class="major">
         <h2>About Us</h2>
         <p>
-					Alert Lock & Key offers a full range door and hardware services, from new installs to remodels, service work, or door and hardware supply. We work with suppliers, general contractors, and businesses to ensure that your needs are met professionally and on time. The hardworking men and women of this company are our foundation, with decades of experience you can rest assured that AL&K is the right fit for your needs. We look forward to working with every single one of our customers. Give us a call today, so we can serve you in the best way possible.
+					Alert Lock & Key offers a full range door and hardware services, from new installs to remodels, service work, or door and hardware supply. We work with suppliers, general contractors, and businesses to ensure that your needs are met professionally and on time. The hardworking men and women of this company are our foundation, with decades of experience you can rest assured that Alert Lock & Key is the right fit for your needs. We look forward to working with every single one of our customers. Give us a call today, so we can serve you in the best way possible.
 				</p><br>
         <!-- <p>
           Alert Lock & Key offers a full range of San Antonio locksmith services, from lockouts to rekeying doors.
@@ -82,7 +82,6 @@
           });
         </script> -->
       </header>
-
       <ul class="icons major">
         <li><i class="fa fa-lock major style1"><i class="label"></i></i></li>
       </ul>
