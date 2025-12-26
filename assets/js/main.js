@@ -37,9 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
     } else if (alt === "Locksmith") {
       images = [
         "locksmith (1).jpg",
-        "locksmith (1).jpeg",
         "locksmith (2).jpg",
-        "locksmith (2).jpeg",
         "locksmith (3).jpg",
         "locksmith (4).jpg",
         "locksmith (5).jpg",
