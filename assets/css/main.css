@@ -102,7 +102,7 @@ input, select, textarea {
 		}
 
 	body, input, select, textarea {
-		color: #fff;
+		color: #f5f5f3;
 		font-family: "Open Sans", Helvetica, sans-serif;
 		font-size: 15pt;
 		font-weight: 400;
@@ -150,7 +150,7 @@ input, select, textarea {
 		}
 
 	strong, b {
-		color: #fff;
+		color: #f5f5f3;
 		font-weight: 600;
 	}
 
@@ -164,7 +164,7 @@ input, select, textarea {
 	}
 
 	h1, h2, h3, h4, h5, h6 {
-		color: #fff;
+		color: #f5f5f3;
 		font-weight: 800;
 		letter-spacing: 0.225em;
 		line-height: 1em;
@@ -234,7 +234,7 @@ input, select, textarea {
 
 	hr {
 		border: 0;
-		border-bottom: solid 2px #fff;
+		border-bottom: solid 2px #f5f5f3;
 		margin: 3em 0;
 	}
 
@@ -243,7 +243,7 @@ input, select, textarea {
 		}
 
 	blockquote {
-		border-left: solid 4px #fff;
+		border-left: solid 4px #f5f5f3;
 		font-style: italic;
 		margin: 0 0 2em 0;
 		padding: 0.5em 0 0.5em 2em;
@@ -1780,7 +1780,7 @@ input, select, textarea {
 	}
 
 		header.major h2, header.major h3, header.major h4, header.major h5, header.major h6 {
-			border-bottom: solid 2px #fff;
+			border-bottom: solid 2px #f5f5f3;
 			display: inline-block;
 			padding-bottom: 1em;
 			position: relative;
@@ -1793,7 +1793,7 @@ input, select, textarea {
 			}
 
 		header.major p {
-			color: #fff;
+			color: #f5f5f3;
 			top: 0;
 		}
 
@@ -1856,7 +1856,7 @@ input, select, textarea {
 	}
 
 	label {
-		color: #fff;
+		color: #f5f5f3;
 		display: block;
 		font-size: 0.9em;
 		font-weight: 600;
@@ -1946,7 +1946,7 @@ input, select, textarea {
 		input[type="checkbox"] + label,
 		input[type="radio"] + label {
 			text-decoration: none;
-			color: #fff;
+			color: #f5f5f3;
 			cursor: pointer;
 			display: inline-block;
 			font-size: 1em;
@@ -1989,7 +1989,7 @@ input, select, textarea {
 		input[type="checkbox"]:checked + label:before,
 		input[type="radio"]:checked + label:before {
 			background: #000000;
-			color: #fff;
+			color: #f5f5f3;
 			content: '\f00c';
 		}
 
@@ -2030,7 +2030,7 @@ input, select, textarea {
 
 	.box {
 		border-radius: 3px;
-		border: solid 2px #fff;
+		border: solid 2px #f5f5f3;
 		margin-bottom: 2em;
 		padding: 1.5em;
 	}
@@ -2090,7 +2090,7 @@ input, select, textarea {
 			-ms-transform: rotate(-45deg);
 			transform: rotate(-45deg);
 			border-radius: 3px;
-			border: solid 2px #fff;
+			border: solid 2px #f5f5f3;
 			display: inline-block;
 			font-size: 1.35em;
 			height: calc(3em + 2px);
@@ -2200,7 +2200,7 @@ input, select, textarea {
 		}
 
 			ul.alt li {
-				border-top: solid 1px #fff;
+				border-top: solid 1px #f5f5f3;
 				padding: 0.5em 0;
 			}
 
@@ -2381,7 +2381,7 @@ input, select, textarea {
 	}
 
 		table tbody tr {
-			border: solid 1px #fff;
+			border: solid 1px #f5f5f3;
 			border-left: 0;
 			border-right: 0;
 		}
@@ -2395,7 +2395,7 @@ input, select, textarea {
 		}
 
 		table th {
-			color: #fff;
+			color: #f5f5f3;
 			font-size: 0.9em;
 			font-weight: 600;
 			padding: 0 0.75em 0.75em 0.75em;
@@ -2403,11 +2403,11 @@ input, select, textarea {
 		}
 
 		table thead {
-			border-bottom: solid 2px #fff;
+			border-bottom: solid 2px #f5f5f3;
 		}
 
 		table tfoot {
-			border-top: solid 2px #fff;
+			border-top: solid 2px #f5f5f3;
 		}
 
 		table.alt {
@@ -2415,7 +2415,7 @@ input, select, textarea {
 		}
 
 			table.alt tbody tr td {
-				border: solid 1px #fff;
+				border: solid 1px #f5f5f3;
 				border-left-width: 0;
 				border-top-width: 0;
 			}
@@ -2454,8 +2454,8 @@ input, select, textarea {
 		background-color: transparent;
 		border-radius: 3px;
 		border: 0;
-		box-shadow: inset 0 0 0 2px #fff;
-		color: #fff;
+		box-shadow: inset 0 0 0 2px #f5f5f3;
+		color: #f5f5f3;
 		cursor: pointer;
 		display: inline-block;
 		font-size: 0.8em;
@@ -2712,7 +2712,7 @@ input, select, textarea {
 				.features li {
 					padding: 3em 0 1em 0 ;
 					background-color: #000000;
-					border-top: solid 2px #fff;
+					border-top: solid 2px #f5f5f3;
 					width: 100%;
 					/* padding: 10%; */
 				}
@@ -3526,7 +3526,7 @@ input, select, textarea {
 .experience-selection option {
     padding: 8px;
     font-size: 16px;
-    /* background-color: #fff; */
+    /* background-color: #f5f5f3; */
     color: #cf2e2e;
 }
 
@@ -3575,7 +3575,7 @@ input, select, textarea {
 .tool-category option {
     padding: 8px;
     font-size: 16px;
-    /* background-color: #fff; */
+    /* background-color: #f5f5f3; */
     color: #cf2e2e;
 }
 
@@ -4003,7 +4003,7 @@ iframe {
 
 					#header nav > ul > li > a {
 						border: 0;
-						color: #fff;
+						color: #f5f5f3;
 						display: block;
 						font-size: 0.8em;
 						letter-spacing: 0.225em;
@@ -4199,7 +4199,7 @@ iframe {
 				-webkit-transition-delay: 0.25s;
 				-ms-transition-delay: 0.25s;
 				transition-delay: 0.25s;
-				background: #fff;
+				background: #f5f5f3;
 				content: '';
 				display: block;
 				height: 2px;
@@ -5003,7 +5003,7 @@ iframe {
   border-radius: 4px;
   border: none;
   background-color: #111;
-  color: #fff;
+  color: #f5f5f3;
   font-size: 14px;
   cursor: pointer;
   transition: background-color 0.2s ease, transform 0.1s ease;
