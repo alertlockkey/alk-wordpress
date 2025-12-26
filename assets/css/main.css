@@ -4117,6 +4117,24 @@ iframe {
 	}
 }
 
+	/* Careers page: invisible banner for header scroll behavior */
+	#careers #banner {
+		min-height: 1px;
+		height: 30px;
+		padding: 0;
+		margin: 0;
+		background: #000000;
+		display:block;
+	}
+
+	#careers #banner:after {
+		min-height: 1px;
+		height: 1px;
+		padding: 0;
+		margin: 0;
+		background: #000000;
+	}
+
 	/* For mobile screens */
 	@media (max-width: 480px) {
 		#banner {
@@ -4635,14 +4653,14 @@ iframe {
 	#careers > header {
 		padding: 0 0 0 0 ;
 		background-color: #000000;
-		/* background-image: -moz-linear-gradient(top, rgba(0,0,0,1), rgba(0,0,0,1)), url("../../images/sa_skyline1.jpg");
+		background-image: -moz-linear-gradient(top, rgba(0,0,0,1), rgba(0,0,0,1)), url("../../images/sa_skyline1.jpg");
 		background-image: -webkit-linear-gradient(top, rgba(0,0,0,1), rgba(0,0,0,1)), url("../../images/sa_skyline1.jpg");
 		background-image: -ms-linear-gradient(top, rgba(0,0,0,1), rgba(0,0,0,1)), url("../../images/sa_skyline1.jpg");
 		background-image: linear-gradient(top, rgba(0,0,0,1), rgba(0,0,0,1)), url("../../images/sa_skyline1.jpg");
 		background-attachment: fixed;
 		background-position: center center;
 		background-repeat: no-repeat;
-		background-size: cover; */
+		background-size: cover;
 		text-align: center;
 		margin: 0em 0em 0em 0em;
 		padding: 1.5em 1.5em 1.5em 1.5em;
@@ -4802,11 +4820,17 @@ iframe {
 	}
 
 	body.landing #footer {
-		background-color: rgba(0, 0, 0, .75);
+		background-color: rgba(0, 0, 0, 0.75);
 	}
 
 	body.is-mobile.landing #page-wrapper {
-		background: none;
+		background-image: -moz-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/sa_skyline1.jpg");
+		background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/sa_skyline1.jpg");
+		background-image: -ms-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/sa_skyline1.jpg");
+		background-image: linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/sa_skyline1.jpg");
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: cover;
 	}
 
 	body.is-mobile.landing #banner,
@@ -4821,7 +4845,7 @@ iframe {
 	}
 
 	body.is-mobile.landing #footer {
-		background-color: #000000;
+		background-color: rgba(0, 0, 0, .75);
 	}
 
 	/* USER ADDED CSS */
