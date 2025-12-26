@@ -1714,7 +1714,7 @@ input, select, textarea {
 					}
 
 						.row.gtr-uniform > * {
-							padding-top: 1.5em;
+							padding-top: 1em;
 						}
 
 				.row.gtr-150 {
@@ -2304,7 +2304,7 @@ input, select, textarea {
 					-webkit-flex-shrink: 1;
 					-ms-flex-shrink: 1;
 					flex-shrink: 1;
-					padding: 1em 0 0 0;
+					padding: 0 0 0 0;
 					text-align: center;
 					width: 100%;
 				}
@@ -4634,20 +4634,23 @@ iframe {
 
 	#careers > header {
 		padding: 0 0 0 0 ;
-		background-image: -moz-linear-gradient(top, rgba(0,0,0,1), rgba(0,0,0,1)), url("../../images/sa_skyline1.jpg");
+		background-color: #000000;
+		/* background-image: -moz-linear-gradient(top, rgba(0,0,0,1), rgba(0,0,0,1)), url("../../images/sa_skyline1.jpg");
 		background-image: -webkit-linear-gradient(top, rgba(0,0,0,1), rgba(0,0,0,1)), url("../../images/sa_skyline1.jpg");
 		background-image: -ms-linear-gradient(top, rgba(0,0,0,1), rgba(0,0,0,1)), url("../../images/sa_skyline1.jpg");
 		background-image: linear-gradient(top, rgba(0,0,0,1), rgba(0,0,0,1)), url("../../images/sa_skyline1.jpg");
 		background-attachment: fixed;
 		background-position: center center;
 		background-repeat: no-repeat;
-		background-size: cover;
+		background-size: cover; */
 		text-align: center;
+		margin: 0em 0em 0em 0em;
+		padding: 1.5em 1.5em 1.5em 1.5em;
 	}
 
 		#careers > header h2 {
 			font-size: 1.75em;
-			margin: 0 0 0.5em 0;
+			margin: 0 0 0 0;
 		}
 
 		#careers > header p {
@@ -4672,7 +4675,8 @@ iframe {
 		@media screen and (max-width: 1280px) {
 
 			#careers > header {
-				padding: 8em 3em 6em 3em ;
+				/* padding: 8em 3em 6em 3em ; */
+				padding: 2em 2em 2em 0em ;
 			}
 
 		}
@@ -4680,7 +4684,7 @@ iframe {
 		@media screen and (max-width: 980px) {
 
 			#careers > header {
-				padding: 10em 3em 8em 3em ;
+				padding: 5em 1em 4em 1em ;
 			}
 
 		}
@@ -4688,7 +4692,7 @@ iframe {
 		@media screen and (max-width: 736px) {
 
 			#careers > header {
-				padding: 5em 3em 3em 3em ;
+				padding: 2em 1em 1em 1em ;
 			}
 
 				#careers > header h2 {
@@ -4862,9 +4866,10 @@ iframe {
 	display: grid;
 	flex-wrap: wrap;
 	gap: auto;
+	padding-top: 2em;
 }
 
-.wpcf7 .col-6,.wpcf7 .col-12-xsmall{
+.wpcf7 .col-6,.wpcf7 .col-12-xsmall {
 	flex: 1 1 100%;
 	display: grid;
 }
@@ -4955,7 +4960,7 @@ iframe {
 
 .wpcf7-form-control-wrap[data-name="your-category"] select {
   display: block;
-  width: 49%;
+  width: 50%;
   padding: 12px;
   border-radius: 3px;
   box-sizing: border-box;
@@ -4980,21 +4985,68 @@ iframe {
 
 .wpcf7-form-control-wrap[data-name="experience-selection"] select {
   min-height: 160px;
-  width: 48%;
+  width: 50%;
 }
 
 .wpcf7-form-control-wrap[data-name="tool-category"] select {
   min-height: 12px;
   padding: 0 1em;
-  width: 48%;
+  width: 50%;
 }
+
+	@media screen and (max-width: 980px) {
+
+		.wpcf7-form-control-wrap[data-name="experience-selection"] select {
+			min-height: 160px;
+			width: 100%;
+		}
+
+		.wpcf7-form-control-wrap[data-name="tool-category"] select {
+			min-height: 12px;
+			padding: 0 1em;
+			width: 100%;
+		}
+
+
+		.wpcf7-form-control-wrap[data-name="your-category"] select {
+			display: block;
+			width: 100%;
+			padding:4px;
+			border-radius: 3px;
+			box-sizing: border-box;
+			font-size: 12px;
+		}
+	}
+
+	@media screen and (max-width: 736px) {
+
+		.wpcf7-form-control-wrap[data-name="experience-selection"] select {
+			min-height: 160px;
+			width: 100%;
+		}
+
+		.wpcf7-form-control-wrap[data-name="tool-category"] select {
+			min-height: 12px;
+			padding: 0 1em;
+			width: 100%;
+		}
+
+		.wpcf7-form-control-wrap[data-name="your-category"] select {
+			display: block;
+			width: 100%;
+			padding: 4px 4px 4px 16px;
+			border-radius: 3px;
+			box-sizing: border-box;
+			font-size: 12px;
+		}
+	}
 
 .wpcf7-form .actions {
   list-style: none;
-  padding: 0;
+  padding-top: 1em;
   margin: 0;
   display: flex;
-  gap: 12px;
+  gap: 0px;
   align-items: center;
   flex-wrap: wrap;
 }
