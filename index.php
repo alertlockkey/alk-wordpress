@@ -92,7 +92,7 @@
   <section id="two" class="wrapper alt style2">
 
     <section class="spotlight">
-      <div class="image">
+      <div class="image" data-folder="<?php echo get_template_directory_uri(); ?>/images/doors_hardware/">
         <img src="<?php echo alk_theme_image('/images/doors_hardware/doors_hardware (1).jpg'); ?>" alt="Doors & Hardware">
       </div>
       <div class="content">
@@ -102,7 +102,7 @@
     </section>
 
     <section class="spotlight">
-      <div class="image">
+      <div class="image" data-folder="<?php echo get_template_directory_uri(); ?>/images/locksmith/">
         <img src="<?php echo alk_theme_image('/images/locksmith/locksmith (1).jpg'); ?>" alt="Locksmith">
       </div>
       <div class="content">
@@ -112,7 +112,7 @@
     </section>
 
     <section class="spotlight">
-      <div class="image">
+      <div class="image" data-folder="<?php echo get_template_directory_uri(); ?>/images/access_control/">
         <img src="<?php echo alk_theme_image('/images/access_control/access_control (1).jpg'); ?>" alt="Access Control">
       </div>
       <div class="content">
