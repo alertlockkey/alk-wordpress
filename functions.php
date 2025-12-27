@@ -29,3 +29,15 @@ function alertlockkey_register_menus() {
 }
 add_action('init', 'alertlockkey_register_menus');
 
+function alk_theme_image( $relative_path ) {
+    $full_path = get_template_directory() . $relative_path;
+    $uri       = get_template_directory_uri() . $relative_path;
+
+    if ( file_exists( $full_path ) ) {
+        return $uri . '?v=' . filemtime( $full_path );
+    }
+
+    return $uri;
+}
+
+

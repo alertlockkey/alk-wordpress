@@ -90,35 +90,39 @@
 
   <!-- Two -->
   <section id="two" class="wrapper alt style2">
+
     <section class="spotlight">
       <div class="image" data-folder="<?php echo get_template_directory_uri(); ?>/images/doors_hardware/">
-        <img src="<?php echo get_template_directory_uri(); ?>/images/doors_hardware/doors_hardware (1).jpg" alt="Doors & Hardware">
+        <img src="<?php echo alk_theme_image('/images/doors_hardware/doors_hardware (1).jpg'); ?>" alt="Doors & Hardware">
       </div>
       <div class="content">
         <h2>Doors & Hardware</h2>
-        <p>				Alert Lock & Key offers expert door and hardware installation in addition to supplying all your door and hardware needs. We provide durable door solutions and seamless installation to ensure optimal functionality and protection.</p>
+        <p>Alert Lock & Key offers expert door and hardware installation in addition to supplying all your door and hardware needs.</p>
       </div>
     </section>
+
     <section class="spotlight">
       <div class="image" data-folder="<?php echo get_template_directory_uri(); ?>/images/locksmith/">
-        <img src="<?php echo get_template_directory_uri(); ?>/images/locksmith/locksmith (1).jpg" alt="Locksmith">
+        <img src="<?php echo alk_theme_image('/images/locksmith/locksmith (1).jpg'); ?>" alt="Locksmith">
       </div>
       <div class="content">
         <h2>Locksmith Services</h2>
-        <p>Alert Lock & Key offers fast, reliable key replacement and key making services for homes and businesses, ensuring secure access and swift resolution for lost keys. We also provide advanced High Security Restricted Keys for enhanced protection against unauthorized duplication and entry.</p>
+        <p>Alert Lock & Key offers fast, reliable key replacement and key making services for homes and businesses.</p>
       </div>
     </section>
+
     <section class="spotlight">
       <div class="image" data-folder="<?php echo get_template_directory_uri(); ?>/images/access_control/">
-        <img src="<?php echo get_template_directory_uri(); ?>/images/access_control/access_control (1).jpg" alt="Access Control">
+        <img src="<?php echo alk_theme_image('/images/access_control/access_control (1).jpg'); ?>" alt="Access Control">
       </div>
       <div class="content">
         <h2>Access Control</h2>
-        <p>Alert Lock & Key provides a full range of access control and enhanced security features to protect your business. Our solutions include remote monitoring and comprehensive safety measures to ensure peace of mind and efficient protection.</p>
+        <p>Alert Lock & Key provides a full range of access control and enhanced security features.</p>
       </div>
     </section>
 
   </section>
+
 
   <!-- Three -->
   <!-- <section id="three" class="wrapper style3 special"> -->
