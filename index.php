@@ -23,10 +23,10 @@
     </div>
 
     <ul class="actions special">
-      <li><a href="#contact" class="button primary">Contact Us</a></li>
+      <li><a href="#contact" class="more scrolly">Contact Us</a></li>
     </ul>
     
-    <a href="#one" class="more scrolly"></a>
+    <a href="#about" class="more scrolly"></a>
   </section>
 
   <!-- One -->
