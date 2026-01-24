@@ -8,12 +8,6 @@
         <li><a href="#contact" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
       </ul>
 
-      <ul class="copyright">
-        <li>&copy; 2020–<span id="currentYear"></span>
-        <a href="http://alertlock.net">Alert Lock & Key</a></li>
-        <li>LIC. #B11924</li>
-      </ul>
-
       <ul class="footer-legal">
         <li><a href="http://alertlock.net">Site Map</a></li>
         <li><a href="#privacy-policy">Privacy Policy</a></li>
@@ -72,6 +66,12 @@
             These terms and conditions are governed by and construed in accordance with the laws of Texas and you irrevocably submit to the exclusive jurisdiction of the courts in that State or location.</p><br>
           </div> -->
       </ul> 
+
+      <ul class="copyright">
+        <li>&copy; 2020–<span id="currentYear"></span>
+        <a href="http://alertlock.net">Alert Lock & Key</a></li>
+        <li>LIC. #B11924</li>
+      </ul>
 
     </footer>
 
