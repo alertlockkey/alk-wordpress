@@ -97,7 +97,7 @@
       </div>
       <div class="content">
         <h2>Doors & Hardware</h2>
-        <p>Alert Lock & Key offers expert door and hardware installation in addition to supplying all your door and hardware needs.</p>
+        <p></p>
       </div>
     </section>
 
@@ -107,7 +107,7 @@
       </div>
       <div class="content">
         <h2>Locksmith Services</h2>
-        <p>Alert Lock & Key offers fast, reliable key replacement and key making services for homes and businesses.</p>
+        <p></p>
       </div>
     </section>
 
@@ -117,7 +117,7 @@
       </div>
       <div class="content">
         <h2>Access Control</h2>
-        <p>Alert Lock & Key provides a full range of access control and enhanced security features.</p>
+        <p></p>
       </div>
     </section>
 
@@ -130,21 +130,75 @@
     <div class="inner">
       <header class="major">
         <h2>Services</h2>
-        <p>In addition to general maintenance work, we specialize in the following services.</p>
+        <p>In addition to general maintenance work across Central and South Texas,<br>
+        we specialize in the following services.</p>
       </header>
       <ul class="features">
         <li class="icon solid fa-building">
           <h3>Doors & Hardware</h3>
-          <p>Alert Lock & Key offers complete commercial wood, hollow metal and commercial storefront glass solutions in Central and South Texas as well frames and all associated harware, ensuring security and functionality. No distance is too far!</p>
+          <p>Alert Lock & Key offers expert door and hardware installation in addition to supplying all your door and hardware needs.</p><br>
+                  <!-- Collapsible content -->
+        <div class="more-content" id="more-doors">
+          <p>Complete commercial wood, hollow metal and commercial storefront glass solutions as well frames and all associated harware, ensuring security and functionality.<br>
+          No distance is too far!</p><br>
+        </div>
+
+        <!-- Toggle button -->
+        <a class="toggle-btn" href="#" data-target="more-doors" aria-expanded="false">Show More</a>
+
         </li>
         <li class="icon solid fa-lock">
           <h3>Locksmith</h3>
-          <p>Alert Lock & Key offers fast and professional key replacement and rekeying services for homes and businesses in Central and South Texas, providing customized key systems, high-security restricted keys, and secure access control for all levels of users.</p>
+          <p>Alert Lock & Key offers fast, reliable key replacement and key making services for homes and businesses.</p><br>
+                  <!-- Collapsible content -->
+        <div class="more-content" id="more-locksmith">
+          <p>Fast and professional key replacement and rekeying services for homes and businesses, providing customized key systems, high-security restricted keys, and secure access control for all levels of users.</p><br>
+        </div>
+
+        <!-- Toggle button -->
+        <a class="toggle-btn" href="#" data-target="more-locksmith" aria-expanded="false">Show More</a>
         </li>
-        <li class="icon solid fa-unlock">
+        <!-- <li class="icon solid fa-th"> -->
+        <li class="icon solid fa-id-card">
           <h3>Access Control</h3>
-          <p>Alert Lock & Key offers advanced access control systems in Central and South Texas, providing convenient, secure, and customizable smart locks for businesses that allow remote control, digital key management, easy lock changes, and enhanced security.</p>
+          <p>Alert Lock & Key provides a full range of access control and enhanced security features.</p><br>
+                  <!-- Collapsible content -->
+        <div class="more-content" id="more-access">
+          <p>Access control systems provide convenient, secure, and customizable smart locks for businesses that allow remote control, digital key management, easy lock changes, and enhanced security.</p><br>
+        </div>
+
+        <!-- Toggle button -->
+        <a class="toggle-btn" href="#" data-target="more-access" aria-expanded="false">Show More</a>
         </li>
+        <script>
+          document.addEventListener("DOMContentLoaded", () => {
+            const section = document.getElementById("one"); // keep your scroll behavior
+
+            document.addEventListener("click", (e) => {
+              const link = e.target.closest(".toggle-btn");
+              if (!link) return;
+
+              e.preventDefault();
+
+              const targetId = link.dataset.target;
+              const content = document.getElementById(targetId);
+              if (!content) return;
+
+              const isExpanded = content.classList.toggle("show");
+              link.textContent = isExpanded ? "Show Less" : "Show More";
+              link.setAttribute("aria-expanded", String(isExpanded));
+              console.log(isExpanded)
+
+              link.classList.add("reset-color");
+              requestAnimationFrame(() => link.classList.remove("reset-color"));
+              link.blur();
+
+              if (!isExpanded && section) {
+                section.scrollIntoView({ behavior: "smooth", block: "start" });
+              }
+            });
+          });
+        </script>
         <!-- <li class="icon solid fa-home">
           <h3>Residential</h3>
           <p>Alert Lock & Key offers comprehensive residential locksmith services in San Antonio, including lockouts, rekeying, lock replacement, and key extraction, ensuring homeowners' security and peace of mind.</p>
