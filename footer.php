@@ -68,8 +68,8 @@
       </ul> 
 
       <ul class="copyright">
-        <li>&copy; 2020–<span id="currentYear"></span>
-        <a href="http://alertlock.net">Alert Lock & Key</a></li>
+        <li>&copy; 2020–<span id="currentYear"></span></li>
+        <li><a href="http://alertlock.net">Alert Lock & Key</a></li>
         <li>LIC. #B11924</li>
       </ul>
 

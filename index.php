@@ -136,39 +136,39 @@
       <ul class="features">
         <li class="icon solid fa-building">
           <h3>Doors & Hardware</h3>
-          <p>Alert Lock & Key offers expert door and hardware installation in addition to supplying all your door and hardware needs.</p><br>
+          <p>Alert Lock & Key offers expert door and hardware installation in addition to supplying all your door and hardware needs.</p>
                   <!-- Collapsible content -->
         <div class="more-content" id="more-doors">
-          <p>Complete commercial wood, hollow metal and commercial storefront glass solutions as well frames and all associated harware, ensuring security and functionality.<br>
-          No distance is too far!</p><br>
+          <p>Complete commercial wood, hollow metal and commercial storefront glass solutions as well frames and all associated harware, ensuring security and functionality.
+          No distance is too far!</p>
         </div>
 
         <!-- Toggle button -->
-        <a class="toggle-btn" href="#" data-target="more-doors" aria-expanded="false">Show More</a>
+        <a class="toggle-btn" href="#" data-target="more-doors" aria-expanded="false">Show More</a><br><br>
 
         </li>
         <li class="icon solid fa-lock">
           <h3>Locksmith</h3>
-          <p>Alert Lock & Key offers fast, reliable key replacement and key making services for homes and businesses.</p><br>
+          <p>Alert Lock & Key offers fast, reliable key replacement and key making services for homes and businesses.</p>
                   <!-- Collapsible content -->
         <div class="more-content" id="more-locksmith">
-          <p>Fast and professional key replacement and rekeying services for homes and businesses, providing customized key systems, high-security restricted keys, and secure access control for all levels of users.</p><br>
+          <p>Fast and professional key replacement and rekeying services for homes and businesses, providing customized key systems, high-security restricted keys, and secure access control for all levels of users.</p>
         </div>
 
         <!-- Toggle button -->
-        <a class="toggle-btn" href="#" data-target="more-locksmith" aria-expanded="false">Show More</a>
+        <a class="toggle-btn" href="#" data-target="more-locksmith" aria-expanded="false">Show More</a><br><br>
         </li>
         <!-- <li class="icon solid fa-th"> -->
         <li class="icon solid fa-id-card">
           <h3>Access Control</h3>
-          <p>Alert Lock & Key provides a full range of access control and enhanced security features.</p><br>
+          <p>Alert Lock & Key provides a full range of access control and enhanced security features.</p>
                   <!-- Collapsible content -->
         <div class="more-content" id="more-access">
-          <p>Access control systems provide convenient, secure, and customizable smart locks for businesses that allow remote control, digital key management, easy lock changes, and enhanced security.</p><br>
+          <p>Access control systems provide convenient, secure, and customizable smart locks for businesses that allow remote control, digital key management, easy lock changes, and enhanced security.</p>
         </div>
 
         <!-- Toggle button -->
-        <a class="toggle-btn" href="#" data-target="more-access" aria-expanded="false">Show More</a>
+        <a class="toggle-btn" href="#" data-target="more-access" aria-expanded="false">Show More</a><br><br>
         </li>
         <script>
           document.addEventListener("DOMContentLoaded", () => {
