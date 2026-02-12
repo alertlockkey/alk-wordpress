@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<main id="main">
+<main id="contract">
 
   <?php
   // --- Data maps (safe refactor: same markup, less repetition) ---
@@ -9,26 +9,24 @@
     [
         'folder' => '/images/doors_hardware/',
         'img'    => '/images/doors_hardware/doors_hardware (1).jpg',
-        'alt'    => 'Construction & Contracting',
-        'title'  => 'Construction & Contracting',
-        'copy'   => 'Doors & hardware installs, hardware supply, and coordinated security scope for projects.',
-        'link'   => home_url('/?page_id=23'),
+        'alt'    => 'Doors & Hardware',
+        'title'  => 'Doors & Hardware',
+        'copy'   => 'Installation and supply for commercial openings.',
     ],
     [
         'folder' => '/images/locksmith/',
         'img'    => '/images/locksmith/locksmith (1).jpg',
-        'alt'    => 'Service & Facilities',
-        'title'  => 'Service & Facilities',
-        'copy'   => 'Commercial locksmithing and door/hardware service built for repeat work and multi-site support.',
-        'link'   => home_url('/?page_id=25'),
+        'alt'    => 'Commercial Locksmith & Facility Service',
+        'title'  => 'Commercial Locksmith & Facility Service',
+        'copy'   => 'Repairs, rekeys, and on-site support for active facilities.',
     ],
-    // [
-    //     'folder' => '/images/access_control/',
-    //     'img'    => '/images/access_control/access_control (1).jpg',
-    //     'alt'    => 'Access Control & CCTV',
-    //     'title'  => 'Access Control & CCTV',
-    //     'copy'   => 'Credentialed access and camera systems for commercial sites.',
-    // ],
+    [
+        'folder' => '/images/access_control/',
+        'img'    => '/images/access_control/access_control (1).jpg',
+        'alt'    => 'Access Control & CCTV',
+        'title'  => 'Access Control & CCTV',
+        'copy'   => 'Credentialed access and camera systems for commercial sites.',
+    ],
     ];
 
     $services = [
@@ -70,95 +68,60 @@
   <section id="banner">
     <div class="inner">
       <div class="image">
-        <img
-          src="<?php echo esc_url(get_template_directory_uri() . '/images/alk_logo_2016.png'); ?>"
-          height="60%"
-          width="60%"
-          alt=""
-        >
+
       </div>
       <br>
-      <h2>Alert Lock & Key</h2><br>
-      <p class="heading" data-target-resolver></p>
+      <h2>Service & Facilities</h2><br>
+      <p class="heading">Commercial locksmithing, doors, and hardware service for ongoing operations.</p>
     </div>
 
-    <!-- <ul class="actions special">
-      <li><a href="#contact" class="more scrolly">Contact Us</a></li>
-    </ul> -->
+    <ul class="actions special">
+      <li><a href="#request-service" class="more scrolly">Request Service</a></li>
+    </ul>
 
-    <a href="#services" class="more scrolly"></a>
+    <!-- <a href="#about" class="more scrolly"></a> -->
   </section>
 
-  <!-- Spotlights -->
-  <section id="services" class="wrapper alt style2">
-    <?php foreach ($spotlights as $s) : ?>
-      <section class="spotlight">
-        <div
-          class="image"
-          data-folder="<?php echo esc_attr(get_template_directory_uri() . $s['folder']); ?>"
-        >
-          <img
-            src="<?php echo esc_url(alk_theme_image($s['img'])); ?>"
-            alt="<?php echo esc_attr($s['alt']); ?>"
-          >
-        </div>
-        <div class="content">
-          <h2><?php echo esc_html($s['title']); ?></h2>
-          <p><?php echo esc_html($s['copy']); ?></p>
-            <br><a href=<?php echo esc_url($s['link']); ?> class="button">More Info</a>
-        </div>
-      </section>
-    <?php endforeach; ?>
-  </section>
-
-  <!-- About -->
-  <section id="about" class="wrapper style1 special">
-    <div class="inner">
-      <header class="major">
-        <h2>About Us</h2>
-            <p>
-                Alert Lock & Key is a commercial contractor specializing in doors, hardware, and electronic security.
-                We support construction teams with installs and hardware supply, and we support facilities partners with ongoing service and repair.
-                Our crews are experienced, safety-minded, and built for repeat work across multiple sites.
-            </p>
-            <p class="subtle">
-                Commercial services only — we do not provide automotive or individual residential locksmith services.
-            </p>
-      </header>
-
-      <ul class="icons major">
-        <li><i class="fa fa-lock major style1"><i class="label"></i></i></li>
-      </ul>
-    </div>
-  </section>
 
   <!-- Services -->
 
-    <!-- <section class="wrapper style3 special" id="work-types">
+    <section class="wrapper style3 special" id="work-types">
     <div class="inner">
         <header class="major">
-        <h2>Services</h2>
-        <p>Built for Construction and Facilities</p>
+        <h2>Core services</h2>
+        <p>We support general contractors and project teams with Division 8 execution, coordination,<br> and reliable installs — with the option to supply doors and hardware.</p>
         </header>
 
         <ul class="features">
         <li class="icon solid fa-hard-hat">
-            <h3>Construction & Contracting</h3>
-            <p>Doors & hardware installs, hardware supply, and coordinated security scope for projects.</p>
-            <a href="/construction-contracting/" class="button">Request a Bid</a>
+            <h3>Commercial Locksmithing</h3>
+            <p>Rekeys, lock repair and replacement, master key support, and secure access solutions for commercial spaces.</p>
+            <!-- <a href="/construction-contracting/" class="button">Request a Bid</a> -->
         </li>
         <li class="icon solid fa-toolbox">
-            <h3>Service & Facilities</h3>
-            <p>Commercial locksmithing and door/hardware service built for repeat work and multi-site support.</p>
-            <a href="/service-facilities/" class="button">Request Service</a>
+            <h3>Door & Hardware Service</h3>
+            <p>Troubleshooting, adjustment, repair, and replacement of commercial-grade door hardware.</p>
+            <!-- <a href="/service-facilities/" class="button">Request Service</a> -->
+        </li>
+        <li class="icon solid fa-toolbox">
+            <h3>Doors & Openings</h3>
+            <p>Repair and replacement support when doors, frames, or openings are damaged or no longer functional.</p>
+            <!-- <a href="/service-facilities/" class="button">Request Service</a> -->
+        </li>
+        <li class="icon solid fa-toolbox">
+            <h3>Safes</h3>
+            <p>Service and access support for commercial safes (where applicable).</p>
+            <!-- <a href="/service-facilities/" class="button">Request Service</a> -->
+        </li>
+        <li class="icon solid fa-toolbox">
+            <h3>Limited Access Control & CCTV Support</h3>
+            <p>When it falls within our service scope, we can assist with smaller security tasks — and coordinate when scope expands.</p>
+            <!-- <a href="/service-facilities/" class="button">Request Service</a> -->
         </li>
         </ul><br>
 
-        <p class="subtle">
-        Commercial services only — no automotive or individual residential calls.
-        </p>
     </div>
-    </section> -->
+    </section>
 
   <!-- <section id="services" class="wrapper style3 special">
     <div class="inner">
@@ -217,29 +180,21 @@
     });
   </script>
 
-
-
-
-
   <!-- Contact -->
-  <!-- <article id="contact">
+  <article id="request-service">
     <section class="wrapper style5">
       <div class="inner">
 
         <section>
-          <?php echo do_shortcode('[contact-form-7 id="7a11450" title="Contact Form"]'); ?>
+          <?php echo do_shortcode('[contact-form-7 id="e741dd4" title="request-service"]'); ?>
         </section>
 
-        <a href="mailto:workorders@alertlock.net" class="icon solid fa-envelope"> workorders@alertlock.net</a>
         <p class="icon solid fa-phone">210-342-6678</p>
         <p class="icon solid fa-building">84 NE Interstate 410 Loop<br>San Antonio, TX 78216</p><br>
 
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3471.9177879829176!2d-98.48827322379279!3d29.518755443285087!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x865c60006672fe5b%3A0x804803b1b91be9cf!2s84%20NE%20Interstate%20410%20Loop%2C%20San%20Antonio%2C%20TX%2078216!5e0!3m2!1sen!2sus!4v1724881543732!5m2!1sen!2sus"
-          style="border:0;" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-
       </div>
     </section>
-  </article> -->
+  </article>
 
   <!-- CTA / Brand logos slider -->
   <section id="cta" class="wrapper style4">
@@ -285,3 +240,4 @@
 </main>
 
 <?php get_footer(); ?>
+

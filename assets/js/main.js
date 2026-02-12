@@ -331,7 +331,55 @@ var	$window = $(window),
 			});
 		}
 
+// Sub-Menu Toggle on Click
 
+    const parents = document.querySelectorAll('#menu .menu-item-has-children');
+
+    parents.forEach(li => {
+
+      const link = li.querySelector(':scope > a');
+      const submenu = li.querySelector(':scope > .sub-menu');
+
+      if (!link || !submenu) return;
+
+      // Create caret button
+      const toggleBtn = document.createElement('button');
+      toggleBtn.className = 'submenu-toggle';
+      toggleBtn.setAttribute('aria-expanded', 'false');
+      toggleBtn.innerHTML = '▾';
+
+      // Insert after link
+      link.after(toggleBtn);
+
+      // Toggle behavior
+      toggleBtn.addEventListener('click', function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+
+        const isOpen = li.classList.toggle('is-open');
+        toggleBtn.setAttribute('aria-expanded', isOpen);
+      });
+
+    });
+
+// Reset submenus when Spectral menu closes
+      const body = document.body;
+
+      function resetSubmenus() {
+        document.querySelectorAll('#menu .menu-item-has-children.is-open').forEach(li => {
+          li.classList.remove('is-open');
+          const btn = li.querySelector(':scope > .submenu-toggle');
+          if (btn) btn.setAttribute('aria-expanded', 'false');
+        });
+      }
+
+      // Watch body class changes (Spectral toggles body.is-menu-visible)
+      const obs = new MutationObserver(() => {
+        const menuOpen = body.classList.contains('is-menu-visible');
+        if (!menuOpen) resetSubmenus();
+      });
+
+      obs.observe(body, { attributes: true, attributeFilter: ['class'] });
 
 })(jQuery);
 
