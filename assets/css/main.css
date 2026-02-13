@@ -140,7 +140,7 @@ input, select, textarea {
 		-webkit-transition: color 0.2s ease, border-bottom-color 0.2s ease;
 		-ms-transition: color 0.2s ease, border-bottom-color 0.2s ease;
 		transition: color 0.2s ease, border-bottom-color 0.2s ease;
-		border-bottom: dotted 1px;
+		/* border-bottom: dotted 1px; */
 		color: inherit;
 		text-decoration: none;
 	}
@@ -2756,7 +2756,7 @@ input, select, textarea {
 	.spotlight .image img {
 		border-radius: 0;
 		width: 100%;
-		/* padding-top: 4.5px; */
+		padding-top: 4.5px;
 		padding-bottom: 4.5px;
 		padding-left: 4.5px;
 		padding-right: 4.5px;
@@ -2765,7 +2765,7 @@ input, select, textarea {
 	}
 
 	.spotlight .content {
-		padding: 2em 4em 0.1em 4em ;
+		padding: 2em 4em 2em 4em ;
 		-moz-order: 1;
 		-webkit-order: 1;
 		-ms-order: 1;
@@ -3834,8 +3834,10 @@ iframe {
 			#menu ul > li {
 				margin: 0.25em 0;
 				padding: 0;
+				border-radius: 10px;
 				border: none;
-			}
+				/* box-shadow: 0px 1.5px #000; */
+		}
 
 			#menu ul > li:hover {
 				background-color: #000000;
@@ -3867,6 +3869,7 @@ iframe {
 					transition: all 0.25s ease;
 					text-align: left;
 					line-height: 1.5em;
+					text-decoration: solid underline;
 				}
 
 				#menu ul > li > a:hover,
@@ -4731,9 +4734,9 @@ iframe {
 /* Footer */
 
 	#footer {
-		padding: 6em 0 4em 0 ;
 		background-color: #000000;
 		text-align: center;
+		padding-top: 2em;
 	}
 
 		#footer .icons {
@@ -5197,4 +5200,118 @@ iframe {
 	margin: 0 0 1.5em 0;
 }
 
+	#contract #banner {
+		padding: 12em 0 10em 0 ;
+		background-image: -moz-linear-gradient(top, rgba(0,0,0,.33), rgba(0,0,0,.33)), url("../../images/sa_skyline.jpg");
+		background-image: -webkit-linear-gradient(top, rgba(0,0,0,.33), rgba(0,0,0,.33)), url("../../images/sa_skyline.jpg");
+		background-image: -ms-linear-gradient(top, rgba(0,0,0,.33), rgba(0,0,0,.33)), url("../../images/sa_skyline.jpg");
+		background-image: linear-gradient(top, rgba(0,0,0,.33), rgba(0,0,0,.33)), url("../../images/sa_skyline.jpg");
+		background-attachment: fixed;
+		background-position: top center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position-y: -300px;
+		text-align: center;
+	}
 
+	#contract #banner {
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: -ms-flex;
+		display: flex;
+		-moz-flex-direction: column;
+		-webkit-flex-direction: column;
+		-ms-flex-direction: column;
+		flex-direction: column;
+		-moz-justify-content: center;
+		-webkit-justify-content: center;
+		-ms-justify-content: center;
+		justify-content: center;
+		cursor: default;
+		height: 10vh;
+		min-height: 20em;
+		overflow: hidden;
+		position: relative;
+		text-align: center;
+	}
+
+	#contract #banner .inner {
+		display: block;
+		justify-content: center;
+		align-items: center;
+	}
+
+	#contract #banner p span {
+	display: block;
+	}
+
+
+	#footer ul {
+		margin: 0 0 2em 0;
+	}
+
+	.wrapper.style4.wrapper {
+		padding: 4em 0 0 0;
+		background-color: rgba(0, 0, 0, .75);
+	}
+
+	#services a.button {
+		background-color: #CF2E2E;
+	}
+
+	#services a.button:hover {
+		background-color: #000000;
+	}
+
+/* Hide submenus by default */
+#menu .sub-menu {
+  display: none;
+  padding-left: 1em;
+  box-shadow:none;
+}
+
+#menu .menu-item-has-children {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap; /* allows submenu to drop below */
+	transition: transform 10s ease, opacity 0.2s ease;
+}
+
+#menu .menu-item-has-children > a {
+	display: inline-block; /* override block */
+    flex: 1; /* allows link to take remaining space */
+}
+
+/* Show when open */
+#menu .menu-item-has-children.is-open > .sub-menu {
+	display: block;
+}
+
+/* Caret button styling */
+#menu .submenu-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  width: 4em;
+  color: inherit;
+  box-shadow: none;
+  opacity: 0.8;
+}
+
+#menu .submenu-toggle:hover {
+  color: #CF2E2E;
+}
+
+/* Rotate when open */
+#menu .menu-item-has-children.is-open > .submenu-toggle {
+  transform: rotate(180deg);
+  opacity: 1
+}
+
+
+@media screen and (max-width: 736px) {
+	#menu .submenu-toggle {
+		font-size: 10pt;
+	}
+}
