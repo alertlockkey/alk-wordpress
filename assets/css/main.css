@@ -4286,8 +4286,8 @@ iframe {
 			background-size: contain;
 			content: '';
 			display: block;
-			height: 1em;
-			width: 1em;
+			height: 2.5em;
+			width: 2.5em;
 		}
 
 
@@ -4339,7 +4339,7 @@ iframe {
 				}
 
 				#banner .more {
-					display: none;
+					display: block;
 				}
 
 		}
@@ -4371,7 +4371,7 @@ iframe {
 				}
 
 				#banner .more {
-					display: none;
+					display: block;
 				}
 
 		}
@@ -4403,7 +4403,7 @@ iframe {
 				}
 
 				#banner .more {
-					display: none;
+					display: block;
 				}
 
 		}
@@ -4511,10 +4511,10 @@ iframe {
 
 	#main > header {
 		padding: 12em 0 10em 0 ;
-		background-image: -moz-linear-gradient(top, rgba(0,0,0,1), rgba(0,0,0,1)), url("../../images/sa_skyline1.jpg");
+		/* background-image: -moz-linear-gradient(top, rgba(0,0,0,1), rgba(0,0,0,1)), url("../../images/sa_skyline1.jpg");
 		background-image: -webkit-linear-gradient(top, rgba(0,0,0,1), rgba(0,0,0,1)), url("../../images/sa_skyline1.jpg");
 		background-image: -ms-linear-gradient(top, rgba(0,0,0,1), rgba(0,0,0,1)), url("../../images/sa_skyline1.jpg");
-		background-image: linear-gradient(top, rgba(0,0,0,1), rgba(0,0,0,1)), url("../../images/sa_skyline1.jpg");
+		background-image: linear-gradient(top, rgba(0,0,0,1), rgba(0,0,0,1)), url("../../images/sa_skyline1.jpg"); */
 		background-attachment: fixed;
 		background-position: center center;
 		background-repeat: no-repeat;
@@ -4583,11 +4583,11 @@ iframe {
 
 	#contact > header {
 		padding: 0 0 0 0 ;
-		background-image: -moz-linear-gradient(top, rgba(0,0,0,1), rgba(0,0,0,1)), url("../../images/sa_skyline1.jpg");
+		/* background-image: -moz-linear-gradient(top, rgba(0,0,0,1), rgba(0,0,0,1)), url("../../images/sa_skyline1.jpg");
 		background-image: -webkit-linear-gradient(top, rgba(0,0,0,1), rgba(0,0,0,1)), url("../../images/sa_skyline1.jpg");
 		background-image: -ms-linear-gradient(top, rgba(0,0,0,1), rgba(0,0,0,1)), url("../../images/sa_skyline1.jpg");
 		background-image: linear-gradient(top, rgba(0,0,0,1), rgba(0,0,0,1)), url("../../images/sa_skyline1.jpg");
-		background-attachment: fixed;
+		background-attachment: fixed; */
 		background-position: center center;
 		background-repeat: no-repeat;
 		background-size: cover;
@@ -4734,7 +4734,7 @@ iframe {
 /* Footer */
 
 	#footer {
-		background-color: #000000;
+		background-color: rgba(0,0,0,0.25);
 		text-align: center;
 		padding-top: 2em;
 	}
@@ -4818,14 +4818,21 @@ iframe {
 		background-image: -ms-linear-gradient(top, rgba(0,0,0,0.25), rgba(0,0,0,0.25)), url("../../images/sa_skyline1.jpg");
 		background-image: linear-gradient(top, rgba(0,0,0,0.25), rgba(0,0,0,0.25)), url("../../images/sa_skyline1.jpg");
 		background-attachment: fixed;
-		background-position: center center;
+		background-position: center top;
 		background-repeat: no-repeat;
 		background-size: cover;
 		padding-top: 0;
 	}
 
 	body.landing #footer {
-		background-color: rgba(0, 0, 0, 0.75);
+		background-image: -moz-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.85)), url("../../images/sa_skyline1.jpg");
+		background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.85)), url("../../images/sa_skyline1.jpg");
+		background-image: -ms-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.85)), url("../../images/sa_skyline1.jpg");
+		background-image: linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.85)), url("../../images/sa_skyline1.jpg");
+		background-attachment: fixed;
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: cover;
 	}
 
 	body.is-mobile.landing #page-wrapper {
@@ -4833,24 +4840,34 @@ iframe {
 		background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/sa_skyline1.jpg");
 		background-image: -ms-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/sa_skyline1.jpg");
 		background-image: linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/sa_skyline1.jpg");
+		background-attachment: fixed;
 		background-position: center center;
 		background-repeat: no-repeat;
 		background-size: cover;
+		height: 100vh;
 	}
 
-	body.is-mobile.landing #banner,
+	body.is-mobile.landing #banner {
+		background-image: -moz-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/sa_skyline1.jpg");
+		background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/sa_skyline1.jpg");
+		background-image: -ms-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/sa_skyline1.jpg");
+		background-image: linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/sa_skyline1.jpg");
+		background-attachment: fixed;
+		background-position: top center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		height: 100vh;
+	}
+
 	body.is-mobile.landing .wrapper.style4 {
 		background-image: -moz-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/sa_skyline1.jpg");
 		background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/sa_skyline1.jpg");
 		background-image: -ms-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/sa_skyline1.jpg");
 		background-image: linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/sa_skyline1.jpg");
-		background-position: center center;
+		background-attachment: fixed;
+		background-position: top center;
 		background-repeat: no-repeat;
 		background-size: cover;
-	}
-
-	body.is-mobile.landing #footer {
-		background-color: rgba(0, 0, 0, .75);
 	}
 
 	/* USER ADDED CSS */
@@ -5200,17 +5217,31 @@ iframe {
 	margin: 0 0 1.5em 0;
 }
 
-	#contract #banner {
+	body.page-id-823 #banner,
+	body.page-id-824 #banner {
 		padding: 12em 0 10em 0 ;
-		background-image: -moz-linear-gradient(top, rgba(0,0,0,.33), rgba(0,0,0,.33)), url("../../images/sa_skyline.jpg");
-		background-image: -webkit-linear-gradient(top, rgba(0,0,0,.33), rgba(0,0,0,.33)), url("../../images/sa_skyline.jpg");
-		background-image: -ms-linear-gradient(top, rgba(0,0,0,.33), rgba(0,0,0,.33)), url("../../images/sa_skyline.jpg");
-		background-image: linear-gradient(top, rgba(0,0,0,.33), rgba(0,0,0,.33)), url("../../images/sa_skyline.jpg");
+		background-image: -moz-linear-gradient(top, rgba(0,0,0,.5), rgba(0,0,0,.5)), url("../../images/sa_skyline.jpg");
+		background-image: -webkit-linear-gradient(top, rgba(0,0,0,.5), rgba(0,0,0,.5)), url("../../images/sa_skyline.jpg");
+		background-image: -ms-linear-gradient(top, rgba(0,0,0,.5), rgba(0,0,0,.5)), url("../../images/sa_skyline.jpg");
+		background-image: linear-gradient(top, rgba(0,0,0,.5), rgba(0,0,0,.5)), url("../../images/sa_skyline.jpg");
 		background-attachment: fixed;
-		background-position: top center;
+		background-position: center center, center -375px;
 		background-repeat: no-repeat;
 		background-size: cover;
-		background-position-y: -300px;
+		text-align: center;
+	}
+
+	body.is-mobile.page-id-823 #banner,
+	body.is-mobile.page-id-824 #banner {
+		padding: 12em 0 10em 0 ;
+		background-image: -moz-linear-gradient(top, rgba(0,0,0,.5), rgba(0,0,0,.5)), url("../../images/sa_skyline.jpg");
+		background-image: -webkit-linear-gradient(top, rgba(0,0,0,.5), rgba(0,0,0,.5)), url("../../images/sa_skyline.jpg");
+		background-image: -ms-linear-gradient(top, rgba(0,0,0,.5), rgba(0,0,0,.5)), url("../../images/sa_skyline.jpg");
+		background-image: linear-gradient(top, rgba(0,0,0,.5), rgba(0,0,0,.5)), url("../../images/sa_skyline.jpg");
+		background-attachment: fixed fixed;
+		background-position: center center, -375px -300px;
+		background-repeat: no-repeat, no-repeat;
+		background-size: cover, cover;
 		text-align: center;
 	}
 
@@ -5228,8 +5259,8 @@ iframe {
 		-ms-justify-content: center;
 		justify-content: center;
 		cursor: default;
-		height: 10vh;
-		min-height: 20em;
+		height: 15vh;
+		min-height: 25em;
 		overflow: hidden;
 		position: relative;
 		text-align: center;
@@ -5242,9 +5273,56 @@ iframe {
 	}
 
 	#contract #banner p span {
-	display: block;
+		display: block;
 	}
 
+	body.page-id-823 #footer,
+	body.page-id-824 #footer {
+		background-image: -moz-linear-gradient(rgba(0,0,0,.85), rgba(0,0,0,.85)), url("../../images/sa_skyline.jpg");
+		background-image: -webkit-linear-gradient(rgba(0,0,0,.85), rgba(0,0,0,.85)), url("../../images/sa_skyline.jpg");
+		background-image: -ms-linear-gradient(rgba(0,0,0,.85), rgba(0,0,0,.85)), url("../../images/sa_skyline.jpg");
+		background-image: linear-gradient(rgba(0,0,0,.85), rgba(0,0,0,.85)), url("../../images/sa_skyline.jpg");
+		background-attachment: fixed;
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: cover, cover;
+	}
+
+	body.page-id-823 .wrapper.style4,
+	body.page-id-824 .wrapper.style4 {
+		background-image: -moz-linear-gradient(top, rgba(0,0,0,.5), rgba(0,0,0,.5)), url("../../images/sa_skyline.jpg");
+		background-image: -webkit-linear-gradient(top, rgba(0,0,0,.5), rgba(0,0,0,.5)), url("../../images/sa_skyline.jpg");
+		background-image: -ms-linear-gradient(top, rgba(0,0,0,.5), rgba(0,0,0,.5)), url("../../images/sa_skyline.jpg");
+		background-image: linear-gradient(top, rgba(0,0,0,.5), rgba(0,0,0,.5)), url("../../images/sa_skyline.jpg");
+		background-attachment: fixed;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover, cover;
+	}
+
+	body.is-mobile.page-id-823 #footer,
+	body.is-mobile.page-id-824 #footer {
+		background-image: -moz-linear-gradient(rgba(0,0,0,.85), rgba(0,0,0,.85)), url("../../images/sa_skyline.jpg");
+		background-image: -webkit-linear-gradient(rgba(0,0,0,.85), rgba(0,0,0,.85)), url("../../images/sa_skyline.jpg");
+		background-image: -ms-linear-gradient(rgba(0,0,0,.85), rgba(0,0,0,.85)), url("../../images/sa_skyline.jpg");
+		background-image: linear-gradient(rgba(0,0,0,.85), rgba(0,0,0,.85)), url("../../images/sa_skyline.jpg");
+		background-attachment: fixed fixed;
+		background-position: center center, -375px center;
+		background-repeat: no-repeat, no-repeat;
+		background-size: cover, cover;
+	}
+
+	body.is-mobile.page-id-823 .wrapper.style4,
+	body.is-mobile.page-id-824 .wrapper.style4 {
+		background-image: -moz-linear-gradient(top, rgba(0,0,0,.5), rgba(0,0,0,.5)), url("../../images/sa_skyline.jpg");
+		background-image: -webkit-linear-gradient(top, rgba(0,0,0,.5), rgba(0,0,0,.5)), url("../../images/sa_skyline.jpg");
+		background-image: -ms-linear-gradient(top, rgba(0,0,0,.5), rgba(0,0,0,.5)), url("../../images/sa_skyline.jpg");
+		background-image: linear-gradient(top, rgba(0,0,0,.5), rgba(0,0,0,.5)), url("../../images/sa_skyline.jpg");
+		background-attachment: fixed fixed;
+		background-position: center center, -375px center;
+		background-repeat: no-repeat, no-repeat;
+		background-size: cover, cover;
+	}
 
 	#footer ul {
 		margin: 0 0 2em 0;

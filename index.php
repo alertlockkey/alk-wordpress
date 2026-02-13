@@ -12,15 +12,15 @@
         'alt'    => 'Construction & Contracting',
         'title'  => 'Construction & Contracting',
         'copy'   => 'Doors & hardware installs, hardware supply, and coordinated security scope for projects.',
-        'link'   => home_url('/?page_id=23'),
+        'link'   => home_url('/?page_id=824'),
     ],
     [
         'folder' => '/images/locksmith/',
         'img'    => '/images/locksmith/locksmith (1).jpg',
         'alt'    => 'Service & Facilities',
         'title'  => 'Service & Facilities',
-        'copy'   => 'Commercial locksmithing and door/hardware service built for repeat work and multi-site support.',
-        'link'   => home_url('/?page_id=25'),
+        'copy'   => 'Commercial locksmithing and door/hardware service built for lasting solutions and multi-site support.',
+        'link'   => home_url('/?page_id=823'),
     ],
     // [
     //     'folder' => '/images/access_control/',
